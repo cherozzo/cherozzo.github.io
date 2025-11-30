@@ -7,26 +7,30 @@
   <meta name="description" content="Cherozzo Gravações — Estúdio em Barão Geraldo, Campinas. Produção, gravação, mix e master.">
   
     <style>
-        /* --- Variáveis e Reset Básico --- */
+        /* --- Variáveis e Cores (Ajuste de Prioridade) --- */
         :root {
           --bg: #0D0D0D; 
-          --text: #ffffff;
+          --text: #ffffff; 
           --muted: #aaaaaa; 
           --accent: #ffffff; 
           --maxw: 1100px;
         }
+        
         /* RESET MÁXIMO PARA GARANTIR ESTILO */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
-          background: var(--bg); /* Fundo Escuro */
-          color: var(--text);
-            /* FONTES PADRÃO (HELVETICA/ARIAL) PARA MÁXIMA ESTABILIDADE */
+          /* FORÇANDO AS CORES COM !IMPORTANT */
+          background: var(--bg) !important; 
+          color: var(--text) !important; 
+          
+            /* FONTES PADRÃO (HELVETICA/ARIAL) */
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
             font-weight: 300; 
         }
         
+        /* --- Estilos Gerais --- */
         h1 { font-weight: 700; }
         h2 { margin-bottom: 20px; font-size: 28px; font-weight: 700; border-bottom: 1px solid #1f1f1f; padding-bottom: 8px; }
         p { margin-bottom: 15px; }
@@ -159,20 +163,4 @@
       <h2>Contato</h2>
       <p class="contact-info-line">WhatsApp: <a href="https://wa.me/5511998045881" target="_blank" rel="noopener">11 99804-5881</a></p>
       <p class="contact-info-line">Instagram: <a href="https://instagram.com/cherozzo" target="_blank" rel="noopener">@cherozzo</a></p>
-      <p class="contact-info-line">Email: <a href="mailto:cherozzo.records@gmail.com">cherozzo.records@gmail.com</a></p>
-      <p class="contact-info-line">Localização: Rua Abel José Bonomi, 149 - Barão Geraldo, Campinas (SP).</p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/5511998045881" target="_blank" rel="noopener">Fale Agora</a>
-      </div>
-    </section>
-  </main>
-
-    <footer class="site-footer" role="contentinfo">
-    <div class="wrap">
-      <p>© 2025 Cherozzo — Gravações. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <p class="contact-info-line">Email: <a href="mailto:cherozzo.records@gmail.com">cherozzo.records
