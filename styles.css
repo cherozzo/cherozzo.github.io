@@ -142,7 +142,8 @@ h2 {
     margin-bottom: 4px !important; 
     line-height: 1.5; 
 }
-#contato a {
+/* CORREÇÃO FINAL: Usa alta especificidade para resolver o link roxo */
+#contato .contact-info-line a { 
     color: var(--text) !important;
     text-decoration: none !important;
 }
