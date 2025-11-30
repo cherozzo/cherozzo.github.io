@@ -1,85 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cherozzo - Gravações</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherozzo - Gravações</title>
+  <style>
+        /* VARIAVEIS DE COR */
+        :root {
+            --bg-color: #0D0D0D; /* PRETO ESCURO QUASE PURO */
+            --text-color: #EEEEEE; /* BRANCO SUAVE */
+            --accent-color: #EEEEEE; /* USANDO BRANCO PARA ACENTOS */
+            --border-color: #333;
+        }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-color); /* FUNDO PRETO */
+      color: var(--text-color); /* TEXTO BRANCO SUAVE */
+    }
+    header {
+      background: #000;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent-color); /* ACENTO BRANCO */
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 20px;
+      color: var(--accent-color); /* ACENTO BRANCO */
+      text-transform: uppercase;
+    }
+
+    /* CORREÇÃO: LINKS DEVEM SER BRANCOS */
+    a {
+        color: var(--text-color); /* GARANTE QUE LINKS FIQUEM BRANCOS */
+        text-decoration: none; /* REMOVE SUBLINHADO PADRÃO */
     }
-    header {
-      background: #000;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 3px solid #e63946;
+    a:hover {
+        color: #999; /* DEIXA CINZA CLARO AO PASSAR O MOUSE */
     }
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      color: var(--accent-color); /* ACENTO BRANCO */
+      border-left: 4px solid var(--accent-color); /* ACENTO BRANCO */
+      padding-left: 10px;
+      text-transform: uppercase;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* ESTILO PARA A LISTA DE LINKS DE PRODUÇÃO */
+    .links-list a {
+        display: block;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        margin-bottom: 5px;
     }
-    header p {
-      margin: 10px 0 0;
-      font-size: 20px;
-      color: #e63946;
-      text-transform: uppercase;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h2 {
-      color: #e63946;
-      border-left: 4px solid #e63946;
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-    .services li {
-      padding: 10px 0;
-      border-bottom: 1px solid #333;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: #000;
-      border-top: 3px solid #e63946;
-      font-size: 14px;
-    }
-  </style>
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #000;
+      border-top: 3px solid var(--accent-color); /* ACENTO BRANCO */
+      font-size: 14px;
+      color: #777; /* Deixando o texto do footer mais discreto */
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Cherozzo</h1>
-    <p>Gravações</p>
-  </header>
+  <header>
+    <h1>Cherozzo</h1>
+    <p>Audiovisual profissional para artistas e marcas.</p>
+  </header>
 
-  <section class="bio">
-    <h2>Sobre o Estúdio</h2>
-    <p>
-     O Cherozzo Records nasceu em 2019 do know-how de quem vive o palco, a estrada e o underground há mais de uma década.
-     Somos um estúdio focado em entregar identidade sonora profissional para artistas independentes, bandas e projetos que buscam intensidade e excelência técnica. 
-     Da Europa ao Estúdio: Antes de se dedicar integralmente à produção em 2017, o fundador do Cherozzo, Renato Invernizzi, rodou o mundo como guitarrista. 
-     Como ex-membro das bandas Every Man Is An Island e Black Days, ele acumulou mais de um milhão de streams no Spotify, garantindo a visão de mercado que o seu projeto precisa. 
-     Nossa experiência vai além do som independente. O Cherozzo atende demandas de grandes empresas como a multinacional Hyperx, aplicando o mesmo rigor técnico que usamos na nossa própria música.
-     O fundador do estúdio também integra a banda Cura (@cura.oficial), que faz parte do casting de artistas da Virgin Music.
-    </p>
-  </section>
+  <section class="bio">
+    <h2>Sobre o Estúdio</h2>
+    <p>
+     O Cherozzo Records nasceu em 2019 do know-how de quem vive o palco, a estrada e o underground há mais de uma década.
+     Somos um estúdio focado em entregar identidade sonora profissional para artistas independentes, bandas e projetos que buscam intensidade e excelência técnica. 
+     Da Europa ao Estúdio: Antes de se dedicar integralmente à produção em 2017, o fundador do Cherozzo, Renato Invernizzi, rodou o mundo como guitarrista. 
+     Como ex-membro das bandas Every Man Is An Island e Black Days, ele acumulou mais de um milhão de streams no Spotify, garantindo a visão de mercado que o seu projeto precisa. 
+     Nossa experiência vai além do som independente. Cherozzo atende demandas de grandes empresas como a multinacional Hyperx, aplicando o mesmo rigor técnico que usa nas próprias músicas.
+     O fundador do estúdio também integra a banda Cura, que faz parte do casting de artistas da Virgin Music Brasil - UMG.
+    </p>
+  </section>
 
-  <section class="services">
-    <h2>Serviços</h2>
-    <ul>
-      <li>Gravação (vocais / instrumentos)</li>
+  <section class="services">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Gravação (vocais / instrumentos)</li>
       <li>Produção musical completa</li>
       <li>Mixagem e Masterização</li>
       <li>Gravação e edição de Podcasts</li>
@@ -95,29 +123,29 @@
       <li>Curso: Introdução à Produção Musical no Mercado Independente</li>
       <li>Curso: Setup e Equipamentos</li>
       <li>Aulas de Guitarra com Renato Invernizzi</li>
-    </ul>
-  </section>
+    </ul>
+  </section>
 
-      <section id="producoes" class="section wrap" role="region" aria-label="Produções">
-      <h2>Produções — Ouça algumas</h2>
+  <section class="producoes">
+    <h2>Produções — Ouça algumas</h2>
+    <div class="links-list">
+      <a href="https://www.youtube.com/watch?v=E1nysREzgbU&list=PLJHpPJ_YEmh-3iByleZGBKP1cOfioIxki" target="_blank" rel="noopener">Every Man Is An Island</a>
+      <a href="https://www.youtube.com/watch?v=YuiLK0ADXvM&list=PLJHpPJ_YEmh8jx3caEVBR7SNlfgg_kV5F" target="_blank" rel="noopener">Black Days</a>
+      <a href="https://www.youtube.com/watch?v=LLEkhQD1J3E&list=PLJHpPJ_YEmh8or3boveIFoJdNtTaio4s2" target="_blank" rel="noopener">HyperXBrasil</a>
+      <a href="https://www.youtube.com/watch?v=jHo6mShpYwo&list=PLJHpPJ_YEmh97yHRXHkixJMhhZViUqzB5" target="_blank" rel="noopener">Cura</a>
+    </div>
+  </section>
 
-      <div class="links-list">
-        <a href="https://www.youtube.com/watch?v=E1nysREzgbU&list=PLJHpPJ_YEmh-3iByleZGBKP1cOfioIxki" target="_blank" rel="noopener">Every Man Is An Island</a>
-        <a href="https://www.youtube.com/watch?v=YuiLK0ADXvM&list=PLJHpPJ_YEmh8jx3caEVBR7SNlfgg_kV5F" target="_blank" rel="noopener">Black Days</a>
-        <a href="https://www.youtube.com/watch?v=LLEkhQD1J3E&list=PLJHpPJ_YEmh8or3boveIFoJdNtTaio4s2" target="_blank" rel="noopener">HyperXBrasil</a>
-        <a href="https://www.youtube.com/watch?v=jHo6mShpYwo&list=PLJHpPJ_YEmh97yHRXHkixJMhhZViUqzB5" target="_blank" rel="noopener">Cura</a>
-      </div>
-    </section>
+  <section class="contato">
+    <h2>Contato</h2>
+    <p>WhatsApp: <a href="https://wa.me/5511998045881" target="_blank" rel="noopener">11 99804-5881</a></p>
+    <p>Instagram: <a href="https://instagram.com/cherozzo" target="_blank" rel="noopener">@cherozzo</a></p>
+    <p>Email: <a href="mailto:cherozzo.records@gmail.com" target="_blank" rel="noopender">cherozzo.records@gmail.com</a></p>
+    <p>Localização: Rua Abel José Bonomi, 149 - Barão Geraldo, Campinas (SP).</p>
+  </section>
 
-  <section id="contato" class="section wrap" role="region" aria-label="Contato">
-      <h2>Contato</h2>
-      <p class="contact-info-line">WhatsApp: <a href="https://wa.me/5511998045881" target="_blank" rel="noopener">11 99804-5881</a></p>
-      <p class="contact-info-line">Instagram: <a href="https://instagram.com/cherozzo" target="_blank" rel="noopener">@cherozzo</a></p>
-      <p class="contact-info-line">Email: <a href="mailto:cherozzo.records@gmail.com" target="_blank" rel="noopender">cherozzo.records@gmail.com</a></p>
-  </section>
-
-  <footer>
-    © 2025 Cherozzo – Gravações. Todos os direitos reservados.
-  </footer>
+  <footer>
+    © 2025 Cherozzo – Gravações. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
