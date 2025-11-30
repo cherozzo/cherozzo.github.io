@@ -1,20 +1,20 @@
 /* --- Variáveis e Reset Básico --- */
 :root {
-  --bg: #0D0D0D; 
-  --text: #ffffff;
-  --muted: #aaaaaa; 
-  --accent: #ffffff; 
-  --maxw: 1100px;
+  --bg: #0D0D0D;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+  --accent: #ffffff;
+  --maxw: 1100px;
 }
 * { box-sizing: border-box; }
 body {
-  margin: 0;
-  background: var(--bg); /* Fundo Escuro */
-  color: var(--text);
-  
-    font-family: 'Montserrat', sans-serif; /* Fonte Principal */
-    line-height: 1.6; 
-    font-weight: 300; 
+  margin: 0;
+  background: var(--bg); /* Fundo Escuro */
+  color: var(--text);
+
+  font-family: 'Montserrat', sans-serif; /* Fonte Principal */
+  line-height: 1.6;
+  font-weight: 300;
 }
 h1, h2, h3 { font-weight: 700; }
 a { color: var(--text); text-decoration: none; }
@@ -22,55 +22,55 @@ a:hover { color: var(--muted); }
 
 /* --- Layout Básico --- */
 .wrap {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 /* --- HEADER e LOGO --- */
 .site-header {
-  border-bottom: 1px solid #1f1f1f; 
-  padding: 16px 0; 
+  border-bottom: 1px solid #1f1f1f;
+  padding: 16px 0;
 }
 .site-header .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .logo {
-  width: 320px; /* Tamanho do Logo */
-  max-width: 60%;
-  height: auto;
-  display: block;
+  width: 320px; /* Tamanho do Logo */
+  max-width: 60%;
+  height: auto;
+  display: block;
 }
 .top-nav a {
-  margin-left: 20px; 
-  font-weight: 500; 
+  margin-left: 20px;
+  font-weight: 500;
 }
 
 /* --- HERO --- */
 .hero {
-  padding: 60px 0; 
-  text-align: center;
+  padding: 60px 0;
+  text-align: center;
 }
 .hero-title { font-size: 38px; margin: 0 0 10px; }
 .hero-sub { color: var(--muted); margin: 0 0 15px; font-size: 18px; }
 
 /* --- BOTÕES --- */
 .btn {
-  display: inline-block;
-  padding: 14px 28px; 
-  border-radius: 4px; 
-  font-weight: 700;
-  border: 2px solid var(--accent);
-  background: transparent;
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  border: 2px solid var(--accent);
+  background: transparent;
 }
 .btn-primary {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--text);
+  color: var(--bg);
 }
 .cta-row { margin-top: 20px; }
 
@@ -101,21 +101,21 @@ a:hover { color: var(--muted); }
 /* --- CONTATO E FOOTER --- */
 .contact-info-line a {
   /* GARANTE que os links não fiquem roxos/azuis */
-  color: var(--text) !important; 
+  color: var(--text) !important;
 }
 .site-footer {
-  padding: 25px 0; 
-  border-top: 1px solid #1f1f1f; 
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
+  padding: 25px 0;
+  border-top: 1px solid #1f1f1f;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 880px) {
-  .site-header .wrap { flex-direction: column; gap: 12px; align-items:center; }
-  .logo { width: 260px; }
-  .top-nav { display: none; } 
+  .site-header .wrap { flex-direction: column; gap: 12px; align-items:center; }
+  .logo { width: 260px; }
+  .top-nav { display: none; }
   .hero { padding: 40px 0; }
   .services-list { grid-template-columns: 1fr; }
 }
