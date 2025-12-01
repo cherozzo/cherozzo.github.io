@@ -1,5 +1,5 @@
 /* ------------------------------------------- */
-/* ESTILOS GERAIS (Funciona em Desktop e Mobile) */
+/* ESTILOS GERAIS (Desktop e Mobile) */
 /* ------------------------------------------- */
 body {
     margin: 0;
@@ -18,14 +18,14 @@ a:hover {
 
 header {
     background: #111;
-    padding: 20px 20px; /* Reduzi o padding de baixo */
+    padding: 20px 20px; /* Padding ajustado */
     text-align: center;
     border-bottom: 3px solid #fcfae2;
 }
 
-/* Regra antiga do logo removida, pois a imagem agora é o banner */
+/* Regra antiga do logo (que agora é banner) removida */
 .logo {
-    display: none; /* Esconde o logo caso você o adicione de volta */
+    display: none;
 }
 
 /* Menu Horizontal (Padrão para telas maiores) */
@@ -48,20 +48,24 @@ header {
     font-size: 16px;
 }
 
-/* ⭐️ NOVO: ESTILOS PARA O HERO BANNER FULL-WIDTH ⭐️ */
+/* ⭐️ CORRIGIDO: ESTILOS PARA O HERO BANNER CENTRALIZADO ⭐️ */
 .hero-banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    /* Define a largura máxima igual ao restante do conteúdo */
+    max-width: 900px; 
+    /* CHAVE: Centraliza a seção Hero Banner */
+    margin: 20px auto 0;
+    /* Remove o padding interno para que a imagem use a largura total do contêiner */
+    padding: 0; 
 }
 .hero-image {
     display: block;
-    width: 100%; /* CHAVE: Garante que a imagem ocupe 100% da largura da tela */
+    /* Ocupa 100% do seu contêiner (900px) */
+    width: 100%; 
     height: auto;
     margin: 0 auto;
 }
 
-/* O restante do conteúdo volta a ter a largura máxima de 900px */
+/* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -122,9 +126,12 @@ footer {
 @media screen and (max-width: 600px) {
     
     section {
-        padding: 10px;
+        /* Reduz o padding lateral no celular para ganhar espaço */
+        padding: 10px; 
         margin: 20px auto;
     }
+
+    /* O Hero Banner não precisa de alteração, pois ele se ajusta automaticamente */
 
     /* Menu vertical no celular */
     .main-nav ul {
@@ -139,6 +146,4 @@ footer {
     .main-nav a {
         font-size: 16px;
     }
-    
-    /* Regra do logo não é mais necessária aqui, pois usamos a Hero Image */
 }
