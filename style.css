@@ -18,12 +18,11 @@ a:hover {
 
 header {
     background: #111;
-    padding: 20px 20px; /* Padding ajustado */
+    padding: 20px 20px;
     text-align: center;
     border-bottom: 3px solid #fcfae2;
 }
 
-/* Regra antiga do logo (que agora é banner) removida */
 .logo {
     display: none;
 }
@@ -48,21 +47,22 @@ header {
     font-size: 16px;
 }
 
-/* ⭐️ CORRIGIDO: ESTILOS PARA O HERO BANNER CENTRALIZADO ⭐️ */
+/* ⭐️ CORRIGIDO: ESTILOS PARA O HERO BANNER CENTRALIZADO E ALINHADO ⭐️ */
 .hero-banner {
-    /* Define a largura máxima igual ao restante do conteúdo */
+    /* Define a largura máxima igual ao restante do conteúdo (900px) */
     max-width: 900px; 
-    /* CHAVE: Centraliza a seção Hero Banner */
-    margin: 20px auto 0;
-    /* Remove o padding interno para que a imagem use a largura total do contêiner */
+    /* CHAVE: Centraliza o bloco na tela. O 'auto' é o que faz a mágica. */
+    margin: 20px auto 0; 
+    /* NOVO: Garante que qualquer elemento interno (como a imagem) seja centralizado */
+    text-align: center;
     padding: 0; 
 }
 .hero-image {
     display: block;
-    /* Ocupa 100% do seu contêiner (900px) */
     width: 100%; 
     height: auto;
-    margin: 0 auto;
+    /* Margem auto na imagem também, como redundância */
+    margin: 0 auto; 
 }
 
 /* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
@@ -130,8 +130,6 @@ footer {
         padding: 10px; 
         margin: 20px auto;
     }
-
-    /* O Hero Banner não precisa de alteração, pois ele se ajusta automaticamente */
 
     /* Menu vertical no celular */
     .main-nav ul {
