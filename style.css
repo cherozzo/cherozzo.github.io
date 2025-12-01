@@ -18,16 +18,14 @@ a:hover {
 
 header {
     background: #111;
-    padding: 20px 20px 40px; 
+    padding: 20px 20px; /* Reduzi o padding de baixo */
     text-align: center;
     border-bottom: 3px solid #fcfae2;
 }
 
+/* Regra antiga do logo removida, pois a imagem agora é o banner */
 .logo {
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 15px auto 10px; 
+    display: none; /* Esconde o logo caso você o adicione de volta */
 }
 
 /* Menu Horizontal (Padrão para telas maiores) */
@@ -50,6 +48,20 @@ header {
     font-size: 16px;
 }
 
+/* ⭐️ NOVO: ESTILOS PARA O HERO BANNER FULL-WIDTH ⭐️ */
+.hero-banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.hero-image {
+    display: block;
+    width: 100%; /* CHAVE: Garante que a imagem ocupe 100% da largura da tela */
+    height: auto;
+    margin: 0 auto;
+}
+
+/* O restante do conteúdo volta a ter a largura máxima de 900px */
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -128,7 +140,5 @@ footer {
         font-size: 16px;
     }
     
-    .logo {
-        max-width: 200px;
-    }
+    /* Regra do logo não é mais necessária aqui, pois usamos a Hero Image */
 }
