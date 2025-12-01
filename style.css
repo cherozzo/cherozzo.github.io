@@ -1,0 +1,134 @@
+/* ------------------------------------------- */
+/* ESTILOS GERAIS (Funciona em Desktop e Mobile) */
+/* ------------------------------------------- */
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background: #111;
+    color: #eee;
+}
+
+a {
+    color: #fcfae2;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.8;
+}
+
+header {
+    background: #111;
+    padding: 20px 20px 40px; 
+    text-align: center;
+    border-bottom: 3px solid #fcfae2;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 15px auto 10px; 
+}
+
+/* Menu Horizontal (Padrão para telas maiores) */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    text-align: center;
+    border-bottom: 1px solid #fcfae2; 
+    padding-bottom: 15px;
+}
+.main-nav li {
+    display: inline; 
+    margin: 0 15px;
+}
+.main-nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fcfae2;
+    font-size: 16px;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+h2 {
+    color: #fcfae2;
+    border-left: 4px solid #fcfae2;
+    padding-left: 10px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+.services li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Espaçamento uniforme para links de Produções */
+#producoes p {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #333; 
+}
+#producoes p:last-child {
+    border-bottom: none;
+}
+
+/* Regra de segurança para imagens de galeria (Responsividade) */
+.galeria-collage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+}
+
+/* O Iframe do mapa também precisa ser responsivo */
+#mapa iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #111;
+    border-top: 3px solid #fcfae2;
+    font-size: 14px;
+}
+
+/* ------------------------------------------- */
+/* ⭐️ MEDIA QUERY: AJUSTES PARA CELULAR ⭐️    */
+/* ------------------------------------------- */
+@media screen and (max-width: 600px) {
+    
+    section {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    /* Menu vertical no celular */
+    .main-nav ul {
+        border-bottom: none;
+        padding-bottom: 0;
+        text-align: left;
+    }
+    .main-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    .main-nav a {
+        font-size: 16px;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+}
