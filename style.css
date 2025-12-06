@@ -35,7 +35,6 @@ header {
     padding: 0;
     margin: 0; 
     text-align: center;
-    /* Linha fina invisível (cor do background #111) */
     border-bottom: 1px solid #111; 
     padding-bottom: 15px;
 }
@@ -78,13 +77,6 @@ header {
     margin: 0 auto; 
 }
 
-/* ESTILOS PARA A FOTO DOS FUNDADORES (ÚNICA) */
-.fundadores-img {
-    max-width: 100%;
-    height: auto;
-    display: block; 
-    margin: 20px auto; 
-}
 
 /* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
 section {
@@ -118,7 +110,7 @@ h2 {
     border-bottom: none;
 }
 
-/* ESTILOS ANTIGOS DO GRID DA GALERIA (Mantidos, mas não usados mais) */
+/* ⭐️ GALERIA 3x3: ESTILOS FINAIS ⭐️ */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -131,13 +123,6 @@ h2 {
     object-fit: cover; 
     display: block;
 }
-.galeria-collage {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto; 
-}
-
 
 /* O Iframe do mapa também precisa ser responsivo */
 #mapa iframe {
@@ -154,7 +139,7 @@ footer {
     font-size: 14px;
 }
 
-/* ⭐️ NOVO: ESTILO DO BOTÃO VOLTAR AO TOPO ⭐️ */
+/* ESTILO DO BOTÃO VOLTAR AO TOPO */
 .back-to-top {
     margin-bottom: 10px;
 }
@@ -183,7 +168,7 @@ footer {
         margin: 20px auto;
     }
 
-    /* Muda o grid da galeria para 2 colunas no celular (se for usado) */
+    /* Galeria cai para 2 colunas no celular */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
