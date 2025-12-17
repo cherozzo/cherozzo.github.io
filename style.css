@@ -81,9 +81,16 @@ header {
 /* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
 section {
     max-width: 900px;
-    margin: 40px auto;
+    /* ⭐️ AJUSTE AQUI: Margem inferior reduzida para aproximar as seções ⭐️ */
+    margin: 40px auto 20px auto; /* 40px acima, 20px abaixo */
     padding: 20px;
 }
+
+/* ⭐️ NOVA REGRA: Garante que a seção de Produções não tenha margem inferior excessiva ⭐️ */
+#producoes {
+    margin-bottom: 20px; 
+}
+
 h2 {
     color: #fcfae2;
     border-left: 4px solid #fcfae2;
@@ -165,7 +172,8 @@ footer {
     
     section {
         padding: 10px; 
-        margin: 20px auto;
+        /* ⭐️ AJUSTE TAMBÉM NO MOBILE ⭐️ */
+        margin: 20px auto 10px auto; /* 20px acima, 10px abaixo */
     }
 
     /* Galeria cai para 2 colunas no celular */
