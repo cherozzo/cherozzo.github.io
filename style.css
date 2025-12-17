@@ -110,16 +110,12 @@ h2 {
 /* Espaçamento uniforme para links de Produções */
 #producoes p {
     margin: 0;
-    padding: 10px 0;
+    /* Padding de 10px acima e 10px abaixo para harmonizar o espaço */
+    padding: 10px 0; 
     border-bottom: 1px solid #333; 
 }
-
-/* AJUSTE FINAL: APENAS remove o padding-bottom da última linha, 
-   permitindo que a regra acima aplique a borda (linha). */
-#producoes p:last-child {
-    padding-bottom: 0; 
-    /* REMOVIDO: border-bottom: none; para que a linha apareça! */
-}
+/* REGRA ANTERIOR REMOVIDA: Não precisamos de p:last-child, pois a regra geral 
+   já aplica a borda e o padding que você precisa na última linha. */
 
 
 /* ⭐️ GALERIA 3x3: ESTILOS FINAIS ⭐️ */
