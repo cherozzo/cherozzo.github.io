@@ -81,16 +81,9 @@ header {
 /* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
 section {
     max-width: 900px;
-    /* Margem inferior reduzida (15px) para compactar o layout */
-    margin: 40px auto 15px auto; 
+    margin: 40px auto;
     padding: 20px;
 }
-
-/* Garante que a seção de Produções mantenha a margem inferior reduzida */
-#producoes {
-    margin-bottom: 15px; 
-}
-
 h2 {
     color: #fcfae2;
     border-left: 4px solid #fcfae2;
@@ -110,13 +103,12 @@ h2 {
 /* Espaçamento uniforme para links de Produções */
 #producoes p {
     margin: 0;
-    /* Padding de 10px acima e 10px abaixo para harmonizar o espaço */
-    padding: 10px 0; 
+    padding: 10px 0;
     border-bottom: 1px solid #333; 
 }
-/* REGRA ANTERIOR REMOVIDA: Não precisamos de p:last-child, pois a regra geral 
-   já aplica a borda e o padding que você precisa na última linha. */
-
+#producoes p:last-child {
+    border-bottom: none;
+}
 
 /* ⭐️ GALERIA 3x3: ESTILOS FINAIS ⭐️ */
 .gallery-grid {
@@ -173,8 +165,7 @@ footer {
     
     section {
         padding: 10px; 
-        /* AJUSTE TAMBÉM NO MOBILE */
-        margin: 20px auto 10px auto; /* 20px acima, 10px abaixo */
+        margin: 20px auto;
     }
 
     /* Galeria cai para 2 colunas no celular */
