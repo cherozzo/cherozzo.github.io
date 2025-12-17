@@ -81,14 +81,14 @@ header {
 /* Estilos para todas as demais seções (Bio, Serviços, Contato, etc.) */
 section {
     max-width: 900px;
-    /* AJUSTE: Margem inferior reduzida para aproximar as seções */
-    margin: 40px auto 20px auto; /* 40px acima, 20px abaixo */
+    /* Margem inferior reduzida (15px) para compactar o layout */
+    margin: 40px auto 15px auto; 
     padding: 20px;
 }
 
-/* NOVA REGRA: Garante que a seção de Produções mantenha a margem inferior reduzida */
+/* Garante que a seção de Produções mantenha a margem inferior reduzida */
 #producoes {
-    margin-bottom: 20px; 
+    margin-bottom: 15px; 
 }
 
 h2 {
@@ -111,15 +111,14 @@ h2 {
 #producoes p {
     margin: 0;
     padding: 10px 0;
-    border-bottom: 1px solid #333; /* Mantém a linha divisória */
+    border-bottom: 1px solid #333; 
 }
 
-/* AJUSTE PRINCIPAL: Remove o padding-bottom da última linha para que 
-   o espaço final seja controlado apenas pela margem da seção (20px),
-   e não pela margem da seção + padding da linha. */
+/* AJUSTE FINAL: APENAS remove o padding-bottom da última linha, 
+   permitindo que a regra acima aplique a borda (linha). */
 #producoes p:last-child {
     padding-bottom: 0; 
-    /* Removemos o 'border-bottom: none;' para a linha aparecer */
+    /* REMOVIDO: border-bottom: none; para que a linha apareça! */
 }
 
 
