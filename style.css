@@ -5,7 +5,7 @@ body {
     font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.5; /* Altura de linha padrão para todo o site */
 }
 
 header {
@@ -35,11 +35,6 @@ header {
     font-size: 0.9rem;
 }
 
-.main-nav a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
 /* HERO BANNER */
 .hero-banner {
     text-align: center;
@@ -51,7 +46,7 @@ header {
     height: auto;
 }
 
-/* SEÇÕES */
+/* SEÇÕES E PADRONIZAÇÃO DE TEXTO */
 section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -63,17 +58,30 @@ h2 {
     color: #fff;
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 h3 {
     color: #fff;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-/* 📸 GALERIA VERTICAL (4 Colunas Desktop / 2 Mobile) */
+/* 🎯 AQUI ESTÁ A PADRONIZAÇÃO DOS ESPAÇOS */
+p, li {
+    margin-top: 0;
+    margin-bottom: 10px; /* Espaço fixo e igual para parágrafos e listas */
+    font-size: 0.95rem;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* 📸 GALERIA VERTICAL */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -83,35 +91,18 @@ h3 {
 
 .gallery-grid img {
     width: 100%;
-    aspect-ratio: 4 / 5; /* Formato 1080x1350 */
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     display: block;
     border-radius: 4px;
     transition: transform 0.3s ease;
-    background-color: #252525;
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.02);
-}
-
-/* 🎵 AJUSTE DE ESPAÇAMENTO NAS PRODUÇÕES (MAIS COMPACTO) */
-#producoes p {
-    margin: 8px 0; /* Diminui o espaço entre os trabalhos */
-    font-size: 0.95rem;
-}
-
-#producoes a {
-    font-weight: bold;
-    margin-left: 5px;
-    color: #fff;
-}
-
-/* LINKS E BOTÕES GERAIS */
+/* LINKS */
 a {
     color: #fff;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 a:hover {
@@ -126,23 +117,13 @@ footer {
     color: #888;
 }
 
-.back-to-top {
-    margin-bottom: 20px;
-}
-
-/* RESPONSIVIDADE (CELULAR) */
+/* RESPONSIVIDADE */
 @media screen and (max-width: 600px) {
     .main-nav ul {
         flex-direction: column;
         gap: 10px;
     }
-
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
     }
 }
