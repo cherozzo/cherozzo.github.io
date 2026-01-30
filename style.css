@@ -76,26 +76,38 @@ h3 {
 /* 📸 GALERIA VERTICAL (4 Colunas Desktop / 2 Mobile) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas para fechar as 8 fotos */
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
 
 .gallery-grid img {
     width: 100%;
-    aspect-ratio: 4 / 5; /* Proporção vertical 1080x1350 */
+    aspect-ratio: 4 / 5; /* Formato 1080x1350 */
     object-fit: cover;
     display: block;
     border-radius: 4px;
     transition: transform 0.3s ease;
-    background-color: #252525; /* Cor de fundo enquanto a foto carrega */
+    background-color: #252525;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.02);
 }
 
-/* LINKS E BOTÕES */
+/* 🎵 AJUSTE DE ESPAÇAMENTO NAS PRODUÇÕES (MAIS COMPACTO) */
+#producoes p {
+    margin: 8px 0; /* Diminui o espaço entre os trabalhos */
+    font-size: 0.95rem;
+}
+
+#producoes a {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* LINKS E BOTÕES GERAIS */
 a {
     color: #fff;
     text-decoration: none;
@@ -125,7 +137,6 @@ footer {
         gap: 10px;
     }
 
-    /* Galeria com 2 colunas no celular para não ficar muito pequeno */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
