@@ -1,21 +1,21 @@
-/* ESTILO GERAL */
+/* 🎨 PALETA CHEROZZO (EXTRAÍDA DO LOGO) */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #1a1a1a; /* Grafite escuro do fundo do logo */
+    color: #fdfae6;           /* Creme/Marfim do elemento central do logo */
     font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.5; /* Altura de linha padrão para todo o site */
+    line-height: 1.5;
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #141414; /* Tom levemente mais escuro para destaque */
     padding: 20px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2a2a2a;
 }
 
 .main-nav ul {
@@ -28,11 +28,16 @@ header {
 }
 
 .main-nav a {
-    color: #e0e0e0;
+    color: #fdfae6;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9rem;
+}
+
+.main-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* HERO BANNER */
@@ -55,7 +60,7 @@ section {
 }
 
 h2 {
-    color: #fff;
+    color: #ffffff; /* Branco puro para os títulos principais */
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -63,16 +68,14 @@ h2 {
     letter-spacing: 2px;
 }
 
-h3 {
-    color: #fff;
-    margin-top: 30px;
-    margin-bottom: 10px;
+h3, strong {
+    color: #fdfae6; /* Creme do logo para subtítulos e negritos */
 }
 
-/* 🎯 AQUI ESTÁ A PADRONIZAÇÃO DOS ESPAÇOS */
+/* 🎯 PADRONIZAÇÃO DE ESPAÇOS (ADEUS BURACOS) */
 p, li {
     margin-top: 0;
-    margin-bottom: 10px; /* Espaço fixo e igual para parágrafos e listas */
+    margin-bottom: 10px; /* Espaço fixo entre parágrafos, contatos e produções */
     font-size: 0.95rem;
 }
 
@@ -81,7 +84,7 @@ ul {
     list-style: none;
 }
 
-/* 📸 GALERIA VERTICAL */
+/* 📸 GALERIA VERTICAL (2 LINHAS DE 4 FOTOS) */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -91,18 +94,23 @@ ul {
 
 .gallery-grid img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 5; /* Formato 1080x1350 */
     object-fit: cover;
     display: block;
     border-radius: 4px;
     transition: transform 0.3s ease;
+    background-color: #252525;
 }
 
-/* LINKS */
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* LINKS E BOTÕES */
 a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
 a:hover {
@@ -117,13 +125,19 @@ footer {
     color: #888;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE (CELULAR) */
 @media screen and (max-width: 600px) {
     .main-nav ul {
         flex-direction: column;
         gap: 10px;
     }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
     }
 }
