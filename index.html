@@ -48,7 +48,6 @@ Produtor Musical, Guitarrista e Executivo. Com mais de 15 anos de trajetória, T
 nomes como Zoo, TINN, Ariah e Ruas Mc, atuando diretamente nos arranjos e na direção musical das obras. Com uma bagagem sonora que transita do Rock à Música Eletrônica ( Michael Kane),
 ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo Cherozzo, garantindo solidez profissional da concepção ao lançamento.
     </p>
-
     </section>
 
     <section class="services" id="servicos">
@@ -71,6 +70,10 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
       <li>Curso: Setup e Equipamentos</li>
       <li>Aulas de Guitarra com Renato Invernizzi e Tiago Vas (Material Didático Apostilado)</li>
     </ul>
+
+    <div class="cta-container">
+        <a href="#contato" class="btn-cta">QUERO PRODUZIR MEU PROJETO</a>
+    </div>
     </section>
 
     <section id="video-destaque">
@@ -86,14 +89,14 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
     <section id="galeria">
         <h2>Galeria +++</h2>
         <div class="gallery-grid">
-            <img src="foto1.jpg" alt="Estúdio Cherozzo - Foto 1">
-            <img src="foto2.jpg" alt="Estúdio Cherozzo - Foto 2">
-            <img src="foto3.jpg" alt="Estúdio Cherozzo - Foto 3">
-            <img src="foto4.jpg" alt="Estúdio Cherozzo - Foto 4">
-            <img src="foto5.jpg" alt="Estúdio Cherozzo - Foto 5">
-            <img src="foto6.jpg" alt="Estúdio Cherozzo - Foto 6">
-            <img src="foto7.jpg" alt="Estúdio Cherozzo - Foto 7">
-            <img src="foto8.jpg" alt="Estúdio Cherozzo - Foto 8">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <img src="foto3.jpg" alt="Foto 3">
+            <img src="foto4.jpg" alt="Foto 4">
+            <img src="foto5.jpg" alt="Foto 5">
+            <img src="foto6.jpg" alt="Foto 6">
+            <img src="foto7.jpg" alt="Foto 7">
+            <img src="foto8.jpg" alt="Foto 8">
         </div>
     </section>
 
@@ -118,31 +121,20 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
 
     <section id="mapa" class="section wrap">
       <h2>Localização +++</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.2001!2d-47.078!3d-22.825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c1507f7b7b1b%3A0x1d0b0b0b0b0b0b0b!2sRua%20Abel%20Jos%C3%A9%20Bonomi%2C%20149%20-%20Jardim%20Guani%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" 
-        width="100%" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.844784968875!2d-47.0782413!3d-22.8267233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c15668d2983b%3A0x6b772c724749f76a!2sR.%20Abel%20Jos%C3%A9%20Bonomi%2C%20149%20-%20Jardim%20Santa%20Ginebra%20II%20(Barao%20Geraldo)%2C%20Campinas%20-%20SP%2C%2013084-755!5e0!3m2!1spt-BR!2sbr!4v1700000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <footer class="site-footer">
         <div class="wrap">
-            <div class="back-to-top">
-                <a href="#top">+ Voltar ao Topo</a>
-            </div>
+            <div class="back-to-top"><a href="#top">+ Voltar ao Topo</a></div>
             <p>© 2026 Cherozzo — Records. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <audio id="bg-music" loop>
-      <source src="trilha.mp3" type="audio/mpeg">
+      <source src="chrzz_soundtrack_000.mp3" type="audio/mpeg">
     </audio>
-
-    <button id="music-control" title="Play/Pause Som">
+    <button id="music-control" title="Som">
       <span id="music-icon">🔇</span>
     </button>
 
@@ -150,19 +142,10 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
       const audio = document.getElementById('bg-music');
       const btn = document.getElementById('music-control');
       const icon = document.getElementById('music-icon');
-
-      btn.addEventListener('click', () => {
-        if (audio.paused) {
-          audio.play();
-          icon.innerText = '🔊';
-          btn.classList.add('playing');
-        } else {
-          audio.pause();
-          icon.innerText = '🔇';
-          btn.classList.remove('playing');
-        }
-      });
+      btn.onclick = () => {
+        if (audio.paused) { audio.play(); icon.innerText = '🔊'; }
+        else { audio.pause(); icon.innerText = '🔇'; }
+      };
     </script>
-      
 </body>
 </html>
