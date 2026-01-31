@@ -1,6 +1,6 @@
-/* 🎨 PALETA CHEROZZO (EXTRAÍDA DO LOGO) */
+/* 🎨 PALETA CHEROZZO (BASEADA NO LOGO) */
 body {
-    background-color: #1a1a1a; /* Fundo grafite do logo */
+    background-color: #1a1a1a; /* Grafite do logo */
     color: #fdfae6;           /* Texto fixo: Creme do logo */
     font-family: 'Tahoma', sans-serif;
     margin: 0;
@@ -30,13 +30,13 @@ header {
 }
 
 .main-nav a {
-    color: #ffffff !important; /* Fonte Branca nos links do menu */
+    color: #ffffff !important; /* Branco para links */
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.85rem; /* Leve aumento para acompanhar o banner maior */
+    font-size: 0.85rem;
     padding: 10px 18px;
-    border: 1px solid #ffffff; /* Box Branco */
+    border: 1px solid #ffffff; /* Box Branco solicitado */
     border-radius: 4px;
     transition: all 0.3s ease;
     display: inline-block;
@@ -50,18 +50,18 @@ header {
 /* 🖼️ HERO BANNER (1860x1000) */
 .hero-banner {
     text-align: center;
-    padding: 20px 0; /* Ajustado para o novo tamanho do banner */
+    padding: 20px 0;
 }
 
 .hero-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Cantos retos conforme solicitado */
+    border-radius: 0; /* Cantos retos conforme pedido */
     display: block;
     margin: 0 auto;
 }
 
-/* 🎥 SEÇÃO DE VÍDEO (ANTES DA GALERIA) */
+/* 🎥 SEÇÃO DE VÍDEO (RESERVADA) */
 #video-destaque {
     padding: 40px 20px;
 }
@@ -77,11 +77,11 @@ header {
 #video-player {
     width: 100%;
     display: block;
-    aspect-ratio: 16 / 9; /* Proporção ideal para o seu vídeo */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
-/* 🎯 PADRONIZAÇÃO DE SEÇÕES E TÍTULOS */
+/* 🎯 PADRONIZAÇÃO DE SEÇÕES E TEXTOS */
 section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -99,12 +99,12 @@ h2 {
 }
 
 h3, strong {
-    color: #fdfae6; /* Subtítulos e negritos permanecem em Creme */
+    color: #fdfae6; /* Destaques em Creme */
 }
 
 /* 🔗 LINKS GERAIS (REMOVENDO O AZUL) */
 a {
-    color: #ffffff !important; /* Força todos os links (WhatsApp, IG, Email) a serem Brancos */
+    color: #ffffff !important; /* Tudo o que é clicável fica Branco */
     text-decoration: none;
     font-weight: bold;
 }
@@ -114,16 +114,57 @@ a:hover {
     opacity: 0.8;
 }
 
-/* 🎯 PADRONIZAÇÃO DE ESPAÇOS (ADEUS BURACOS NAS PRODUÇÕES E CONTATO) */
 p, li {
     margin-top: 0;
-    margin-bottom: 10px; /* Garante que tudo fique com o mesmo ritmo visual */
+    margin-bottom: 10px; /* Espaço padronizado */
     font-size: 0.95rem;
 }
 
-/* 📸 GALERIA VERTICAL (FOTOS 4:5) */
+/* 📸 GALERIA VERTICAL (CORREÇÃO DO TAMANHO) */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid !important; /* Força o grid para não ficarem enormes */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
     gap: 15px;
     margin-top: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-grid img {
+    width: 100%; /* Limita a largura ao tamanho da coluna */
+    height: auto;
+    aspect-ratio: 4 / 5; /* Mantém o formato vertical das fotos */
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+/* 🔙 BOX VOLTAR AO TOPO (BRANCO) */
+.back-to-top {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.back-to-top a {
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* RESPONSIVIDADE (CELULAR) */
+@media screen and (max-width: 768px) {
+    .main-nav ul { gap: 10px; }
+    .main-nav a { font-size: 0.7rem; padding: 6px 12px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colunas no celular */
+}
