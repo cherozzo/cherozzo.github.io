@@ -1,7 +1,7 @@
-/* 🎨 PALETA CHEROZZO */
+/* 🎨 PALETA CHEROZZO (EXTRAÍDA DO LOGO) */
 body {
-    background-color: #1a1a1a;
-    color: #fdfae6;
+    background-color: #1a1a1a; /* Fundo grafite do logo */
+    color: #fdfae6;           /* Texto padrão: Creme do logo */
     font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ header {
     border-bottom: 1px solid #2a2a2a;
 }
 
-/* 🔳 BOXES NO MENU */
+/* 🔳 BOXES NO MENU (FONTE BRANCA) */
 .main-nav ul {
     list-style: none;
     padding: 0;
@@ -26,23 +26,23 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* Para não quebrar em telas menores */
+    flex-wrap: wrap;
 }
 
 .main-nav a {
-    color: #fdfae6 !important;
+    color: #ffffff !important; /* Fonte Branca nos links do menu */
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 8px 16px;
-    border: 1px solid #fdfae6; /* O "Box" em volta do texto */
+    border: 1px solid #ffffff; /* Box Branco */
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
-    background-color: #fdfae6;
+    background-color: #ffffff;
     color: #1a1a1a !important;
 }
 
@@ -55,7 +55,7 @@ header {
 .hero-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Garante que os cantos fiquem retos */
+    border-radius: 0; 
 }
 
 /* 🎥 VÍDEO (Antes da Galeria) */
@@ -73,7 +73,7 @@ header {
     object-fit: cover;
 }
 
-/* 🎯 PADRONIZAÇÃO DE SEÇÕES */
+/* 🎯 PADRONIZAÇÃO DE SEÇÕES E TÍTULOS */
 section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -82,16 +82,53 @@ section {
 }
 
 h2 {
-    color: #ffffff;
+    color: #ffffff; /* Títulos em Branco */
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
     margin-bottom: 25px;
     text-transform: uppercase;
 }
 
-p, li {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
+h3, strong {
+    color: #fdfae6; /* Subtítulos e negritos em Creme */
+}
+
+/* 🔗 LINKS GERAIS (WhatsApp, Instagram, etc) */
+a {
+    color: #ffffff !important; /* Força todos os links a serem Brancos, removendo o azul */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* 🔙 BOX VOLTAR AO TOPO (BRANCO) */
+.back-to-top {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.back-to-top a {
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.back-to-top a:hover {
+    background-color: #ffffff;
+    color: #1a1a1a !important;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.8rem;
+    color: #888;
 }
 
 /* 📸 GALERIA VERTICAL */
@@ -105,35 +142,6 @@ p, li {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-}
-
-/* 🔙 BOX VOLTAR AO TOPO */
-.back-to-top {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.back-to-top a {
-    color: #fdfae6 !important;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fdfae6; /* O "Box" no rodapé */
-    padding: 10px 25px;
-    border-radius: 4px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.back-to-top a:hover {
-    background-color: #fdfae6;
-    color: #1a1a1a !important;
-}
-
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 0.8rem;
-    color: #888;
 }
 
 /* RESPONSIVIDADE */
