@@ -30,13 +30,13 @@ header {
 }
 
 .main-nav a {
-    color: #ffffff !important; /* Branco para links */
+    color: #ffffff !important; 
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.85rem;
     padding: 10px 18px;
-    border: 1px solid #ffffff; /* Box Branco solicitado */
+    border: 1px solid #ffffff; 
     border-radius: 4px;
     transition: all 0.3s ease;
     display: inline-block;
@@ -56,19 +56,20 @@ header {
 .hero-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Cantos retos conforme pedido */
+    border-radius: 0; 
     display: block;
     margin: 0 auto;
 }
 
-/* 🎥 SEÇÃO DE VÍDEO (RESERVADA) */
+/* 🎥 VÍDEO ESTILO VITRINE (LOOP INFINITO) */
 #video-destaque {
-    padding: 40px 20px;
+    padding: 60px 0; /* Espaçamento maior para destacar o vídeo */
+    background-color: #141414; /* Fundo levemente diferente para separar as seções */
 }
 
 .video-container-wrap {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px; /* Um pouco mais largo para a "vitrine" */
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid #333;
@@ -77,7 +78,7 @@ header {
 #video-player {
     width: 100%;
     display: block;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* Proporção ideal 1920x1080 */
     object-fit: cover;
 }
 
@@ -90,7 +91,7 @@ section {
 }
 
 h2 {
-    color: #ffffff; /* Títulos em Branco */
+    color: #ffffff; 
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -99,12 +100,12 @@ h2 {
 }
 
 h3, strong {
-    color: #fdfae6; /* Destaques em Creme */
+    color: #fdfae6; 
 }
 
 /* 🔗 LINKS GERAIS (REMOVENDO O AZUL) */
 a {
-    color: #ffffff !important; /* Tudo o que é clicável fica Branco */
+    color: #ffffff !important; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -116,14 +117,14 @@ a:hover {
 
 p, li {
     margin-top: 0;
-    margin-bottom: 10px; /* Espaço padronizado */
+    margin-bottom: 10px;
     font-size: 0.95rem;
 }
 
-/* 📸 GALERIA VERTICAL (CORREÇÃO DO TAMANHO) */
+/* 📸 GALERIA VERTICAL (CORRIGIDA) */
 .gallery-grid {
-    display: grid !important; /* Força o grid para não ficarem enormes */
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     margin-top: 20px;
     max-width: 1000px;
@@ -132,9 +133,9 @@ p, li {
 }
 
 .gallery-grid img {
-    width: 100%; /* Limita a largura ao tamanho da coluna */
+    width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5; /* Mantém o formato vertical das fotos */
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     display: block;
     border-radius: 4px;
@@ -162,9 +163,10 @@ footer {
     color: #888;
 }
 
-/* RESPONSIVIDADE (CELULAR) */
+/* RESPONSIVIDADE */
 @media screen and (max-width: 768px) {
     .main-nav ul { gap: 10px; }
     .main-nav a { font-size: 0.7rem; padding: 6px 12px; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colunas no celular */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    #video-destaque { padding: 30px 10px; }
 }
