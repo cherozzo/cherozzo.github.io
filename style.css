@@ -63,13 +63,13 @@ header {
 
 /* 🎥 VÍDEO ESTILO VITRINE (LOOP INFINITO) */
 #video-destaque {
-    padding: 60px 0; /* Espaçamento maior para destacar o vídeo */
-    background-color: #141414; /* Fundo levemente diferente para separar as seções */
+    padding: 60px 0;
+    background-color: #141414;
 }
 
 .video-container-wrap {
     width: 100%;
-    max-width: 1200px; /* Um pouco mais largo para a "vitrine" */
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid #333;
@@ -78,7 +78,7 @@ header {
 #video-player {
     width: 100%;
     display: block;
-    aspect-ratio: 16 / 9; /* Proporção ideal 1920x1080 */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
@@ -163,7 +163,7 @@ footer {
     color: #888;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE (CELULAR) */
 @media screen and (max-width: 768px) {
     .main-nav ul { gap: 10px; }
     .main-nav a { font-size: 0.7rem; padding: 6px 12px; }
