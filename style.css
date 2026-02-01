@@ -146,16 +146,18 @@ a { color: #ffffff !important; text-decoration: none; font-weight: bold; }
 
 footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; color: #888; }
 
-/* RESPONSIVIDADE - AJUSTE PARA O MENU NÃO ENCAVALAR */
+/* RESPONSIVIDADE - AJUSTE DE MENU E BOTÕES */
 @media screen and (max-width: 768px) {
     .main-nav ul {
-        gap: 8px;           /* Diminui o espaço entre os botões */
-        padding: 0 10px;    /* Dá um respiro nas laterais do menu */
+        gap: 12px 10px;      /* O primeiro valor (12px) cria o respiro entre as LINHAS de botões */
+        padding: 0 15px;
+        justify-content: center;
     }
 
     .main-nav a {
-        font-size: 0.65rem; /* Letra um pouco menor para caber melhor */
-        padding: 6px 10px;  /* Reduz o padding (estava 10px 18px na base) */
+        font-size: 0.75rem;  /* Aumentei levemente a fonte para melhor leitura */
+        padding: 10px 15px;  /* Botões um pouco mais robustos e fáceis de clicar */
+        display: inline-block;
         border-width: 1px;
     }
 
@@ -164,8 +166,9 @@ footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; color: #888;
     }
 
     .btn-cta { 
-        width: 70%;         
-        margin: 20px auto; 
+        width: 75%;          /* Um pouco maior para manter a proporção no mobile */
+        margin: 25px auto; 
         display: block; 
+        font-size: 0.8rem;
     }
 }
