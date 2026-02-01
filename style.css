@@ -114,6 +114,17 @@ h3, strong {
     color: #fdfae6;           /* Cor dos nomes dos produtores e negritos */
 }
 
+/* AJUSTE DE ESPAÇAMENTO DO TEXTO */
+.services ul li {
+    line-height: 1.5;       /* Abre bem o espaço entre as linhas dos serviços */
+    margin-bottom: 20px;    /* Afasta um serviço do outro na lista */
+}
+
+section p {
+    line-height: 1.5;       /* Abre o texto das bios e descrições das seções */
+    margin-bottom: 20px;    /* Cria espaço entre parágrafos para não ficarem colados */
+}
+
 /* BOTÃO DE SOM */
 #music-control {
     position: fixed;
