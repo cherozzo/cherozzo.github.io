@@ -142,7 +142,7 @@ h2 { color: #ffffff; text-transform: uppercase; letter-spacing: 2px; border-bott
 a { color: #ffffff !important; text-decoration: none; font-weight: bold; }
 
 .back-to-top { text-align: center; margin-top: 40px; }
-.back-to-top a { border: 1px solid #ffffff; padding: 10px 25px; border-radius: 4px; display: inline-block; }
+.back-to-top a { border: 1px solid #ffffff; padding: 10px 25px; border-radius: 30px; display: inline-block; }
 
 footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; color: #888; }
 
