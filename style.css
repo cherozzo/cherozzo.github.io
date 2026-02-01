@@ -116,7 +116,7 @@ h3, strong {
 
 /* AJUSTE DE ESPAÇAMENTO DO TEXTO */
 .services ul li {
-    line-height: 1.3;       /* Abre bem o espaço entre as linhas dos serviços */
+    line-height: 1.2;       /* Abre bem o espaço entre as linhas dos serviços */
     margin-bottom: 20px;    /* Afasta um serviço do outro na lista */
 }
 
