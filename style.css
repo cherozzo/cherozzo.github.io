@@ -43,6 +43,32 @@ header {
     color: #1a1a1a !important;
 }
 
+/* 🚀 ESTILO DO BOTÃO CTA (QUERO PRODUZIR MEU PROJETO) */
+.cta-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 18px 35px;
+    border: 2px solid #ffffff;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.btn-cta:hover {
+    background-color: #ffffff;
+    color: #1a1a1a !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    text-decoration: none !important;
+}
+
 .hero-banner { text-align: center; padding: 20px 0; }
 .hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 
