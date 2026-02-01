@@ -146,13 +146,26 @@ a { color: #ffffff !important; text-decoration: none; font-weight: bold; }
 
 footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; color: #888; }
 
+/* RESPONSIVIDADE - AJUSTE PARA O MENU NÃO ENCAVALAR */
 @media screen and (max-width: 768px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    
+    .main-nav ul {
+        gap: 8px;           /* Diminui o espaço entre os botões */
+        padding: 0 10px;    /* Dá um respiro nas laterais do menu */
+    }
+
+    .main-nav a {
+        font-size: 0.65rem; /* Letra um pouco menor para caber melhor */
+        padding: 6px 10px;  /* Reduz o padding (estava 10px 18px na base) */
+        border-width: 1px;
+    }
+
+    .gallery-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
     .btn-cta { 
-        width: 70%;         /* Largura de 70% em aparelhos móveis */
-        margin: 0 auto;     /* Mantém o botão centralizado */
-        display: block;     /* Garante o comportamento de bloco para centralizar com margin auto */
-        box-sizing: border-box; 
+        width: 70%;         
+        margin: 20px auto; 
+        display: block; 
     }
 }
