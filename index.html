@@ -5,21 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cherozzo - Records</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
 </head>
 <body id="top"> 
   
  <header>
-  <nav class="main-nav">
-      <ul>
-          <li><a href="#bio">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#producoes">Produções</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="#mapa">Mapa</a></li>
-      </ul>
-  </nav>
+  <div class="nav-container">
+      <a href="#top" class="mini-logo">
+          <img src="minilogo.png" alt="Cherozzo Mini Logo">
+      </a>
+      <nav class="main-nav">
+          <ul>
+              <li><a href="#bio">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#producoes">Produções</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#contato">Contato</a></li>
+              <li><a href="#mapa">Mapa</a></li>
+          </ul>
+      </nav>
+  </div>
  </header>
 
     <section class="hero-banner">
@@ -92,14 +96,14 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
     <section id="galeria">
         <h2>Galeria +++</h2>
         <div class="gallery-grid">
-            <a href="foto1.jpg"><img src="foto1.jpg" alt="Estúdio Cherozzo - Foto 1"></a>
-            <a href="foto2.jpg"><img src="foto2.jpg" alt="Estúdio Cherozzo - Foto 2"></a>
-            <a href="foto3.jpg"><img src="foto3.jpg" alt="Estúdio Cherozzo - Foto 3"></a>
-            <a href="foto4.jpg"><img src="foto4.jpg" alt="Estúdio Cherozzo - Foto 4"></a>
-            <a href="foto5.jpg"><img src="foto5.jpg" alt="Estúdio Cherozzo - Foto 5"></a>
-            <a href="foto6.jpg"><img src="foto6.jpg" alt="Estúdio Cherozzo - Foto 6"></a>
-            <a href="foto7.jpg"><img src="foto7.jpg" alt="Estúdio Cherozzo - Foto 7"></a>
-            <a href="foto8.jpg"><img src="foto8.jpg" alt="Estúdio Cherozzo - Foto 8"></a>
+            <img src="foto1.jpg" alt="Estúdio Cherozzo - Foto 1">
+            <img src="foto2.jpg" alt="Estúdio Cherozzo - Foto 2">
+            <img src="foto3.jpg" alt="Estúdio Cherozzo - Foto 3">
+            <img src="foto4.jpg" alt="Estúdio Cherozzo - Foto 4">
+            <img src="foto5.jpg" alt="Estúdio Cherozzo - Foto 5">
+            <img src="foto6.jpg" alt="Estúdio Cherozzo - Foto 6">
+            <img src="foto7.jpg" alt="Estúdio Cherozzo - Foto 7">
+            <img src="foto8.jpg" alt="Estúdio Cherozzo - Foto 8">
         </div>
     </section>
 
@@ -152,15 +156,7 @@ ele foca no desenvolvimento da identidade de marca de cada projeto assinado pelo
       <span id="music-icon">🔇</span>
     </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
     <script>
-      // Ativa o zoom na galeria
-      var lightbox = new SimpleLightbox('.gallery-grid a', { 
-          fadeSpeed: 200,
-          scrollZoom: false
-      });
-
-      // Lógica do som (já existente)
       const audio = document.getElementById('bg-music');
       const btn = document.getElementById('music-control');
       const icon = document.getElementById('music-icon');
