@@ -1,26 +1,27 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - CORRIGIDO */
+/* 🎨 ESTILO CHEROZZO RECORDS - CONSOLIDADO FINAL */
 html { scroll-behavior: smooth; }
 
 body {
     background-color: #1a1a1a;
+    /* Fundo Parallax com Foto 7 */
     background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('foto7.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fdfae6;
-    font-family: 'Helvetica', 'Arial', sans-serif; /* Fonte mais limpa */
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0; padding: 0; line-height: 1.6;
 }
 
-/* 🔗 RESET DE LINKS (Remove sublinhados de tudo) */
-a, a:hover, a:visited, a:active {
+/* 🔗 RESET DE LINKS E CLICÁVEIS (Branco Puro e Sem Sublinhado) */
+a, a:visited, a:active {
     text-decoration: none !important;
-    color: inherit;
-    outline: none;
+    color: #ffffff !important;
+    transition: 0.3s;
 }
 
-/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO */
+/* 🏗️ HEADER - CENTRALIZAÇÃO TOTAL */
 header {
     background-color: rgba(15, 15, 15, 0.98);
     height: 80px;
@@ -44,14 +45,14 @@ header {
 }
 .mini-logo:hover img { transform: scale(1.03); } 
 
-/* 🟢 BOTÕES PÍLULA - FONTE E ESTILO CORRIGIDOS */
+/* 🟢 BOTÕES PÍLULA (Branco e Moderno) */
 .main-nav ul { 
     list-style: none; padding: 0; margin: 0; 
     display: flex; align-items: center; gap: 10px; 
 }
 .main-nav a {
-    color: #fdfae6 !important; 
-    border: 2px solid #fdfae6; /* Borda um pouco mais firme */
+    color: #ffffff !important; 
+    border: 2px solid #ffffff; 
     border-radius: 40px; 
     text-transform: uppercase;
     font-weight: 700; 
@@ -62,9 +63,9 @@ header {
     line-height: 1;
     letter-spacing: 1px;
 }
-.main-nav a:hover { background-color: #fdfae6; color: #1a1a1a !important; }
+.main-nav a:hover { background-color: #ffffff; color: #1a1a1a !important; }
 
-/* 🚀 HERO E VÍDEO - TRAVANDO O TAMANHO (NÃO ESTOURA MAIS) */
+/* 🚀 HERO E VÍDEO (Tamanhos Travados) */
 .hero-image { 
     max-width: 100%; 
     height: auto; 
@@ -74,20 +75,27 @@ header {
 }
 
 .video-container-wrap { 
-    max-width: 800px; /* Trava o tamanho do vídeo */
+    max-width: 800px; 
     margin: 0 auto; 
     border-radius: 12px; 
     overflow: hidden; 
 }
 #video-player { width: 100%; display: block; }
 
-/* 📏 SEÇÕES */
+/* 📏 SEÇÕES (Espaçamento Reduzido e Transparência) */
 section { 
     padding: 35px 20px; 
     max-width: 850px; 
     margin: 20px auto; 
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(26, 26, 26, 0.82);
     border-radius: 12px;
+}
+
+/* Fundo da Foto 5 no bloco de vídeo */
+#video-destaque {
+    background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('foto5.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 h2 { 
@@ -97,7 +105,11 @@ h2 {
     font-size: 1.4rem;
 }
 
-/* 📸 GALERIA */
+/* 🧬 UNIFORMIZAÇÃO DE TEXTOS */
+p, li { margin-bottom: 15px; line-height: 1.6; }
+section span, section span a { color: #ffffff !important; font-weight: bold; }
+
+/* 📸 GALERIA (Zoom Mínimo Isolado) */
 .gallery-grid {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 12px;
@@ -108,42 +120,56 @@ h2 {
 }
 .gallery-grid img:hover { transform: scale(1.02); }
 
-/* 📍 MAPA PRETO (Underground Style) */
+/* 📍 MAPA DARK */
 #mapa iframe { 
     filter: grayscale(1) invert(0.9) contrast(1.2); 
     border-radius: 15px;
 }
 
-/* 🔝 FOOTER CENTRALIZADO (Corrigindo o desvio para a direita) */
+/* 🔝 FOOTER CENTRALIZADO */
 .site-footer {
     text-align: center;
     padding: 60px 20px;
     width: 100%;
     clear: both;
 }
-
-.back-to-top { 
-    margin-bottom: 20px;
-    display: block;
-}
-
+.back-to-top { margin-bottom: 20px; display: block; }
 .back-to-top a {
-    border: 1px solid #fdfae6;
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
     padding: 10px 20px;
     border-radius: 30px;
     font-size: 0.7rem;
     display: inline-block;
 }
+.site-footer p { font-size: 0.8rem; color: #777; margin-top: 10px; }
 
-.site-footer p { 
-    font-size: 0.8rem; 
-    color: #777; 
-    margin: 0 auto;
+/* 🔊 BOTÃO DE MÚSICA */
+#music-control {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    width: 55px; 
+    height: 55px;
+    border-radius: 50%; 
+    background: rgba(26, 26, 26, 0.9); 
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    z-index: 1001; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
+#music-control:hover { transform: scale(1.1); }
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
+    header { height: auto; padding: 20px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    header { height: auto; padding: 20px 0; }
+    section { margin: 15px; }
 }
