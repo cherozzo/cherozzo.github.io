@@ -114,7 +114,10 @@ h3, strong { color: #fdfae6; }
 section p { margin-bottom: 20px; }
 
 /* 🧬 DESTAQUE EM BRANCO (PÓS DOIS PONTOS) */
-section span { color: #ffffff !important; font-weight: normal; }
+section span, section span a { 
+    color: #ffffff !important; 
+    font-weight: normal; 
+}
 
 /* 🔊 BOTÃO DE SOM */
 #music-control {
