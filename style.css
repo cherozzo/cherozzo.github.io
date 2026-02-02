@@ -15,14 +15,55 @@ a, a:visited, a:active {
     transition: 0.3s;
 }
 
+/* 🛠️ AJUSTE PARA MINI LOGO ALINHADA À ESQUERDA */
 header {
     background-color: #141414;
-    padding: 25px 0;
-    text-align: center;
+    padding: 15px 0; /* Reduzi um pouco para ficar mais elegante com a logo */
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o bloco todo (Logo + Menu) */
+    gap: 25px; /* Espaço entre a logo e o primeiro item (Sobre) */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mini-logo img {
+    height: 35px; /* Tamanho menor para harmonizar com a altura dos botões */
+    width: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.mini-logo img:hover {
+    transform: scale(1.1); /* Mantive a mexidinha! */
+}
+
+/* 📱 AJUSTE MOBILE PARA MANTER EM LINHA */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        gap: 15px; /* Encurta o espaço no celular */
+        flex-wrap: nowrap; /* Impede que a logo pule para cima do menu */
+        justify-content: flex-start; /* Alinha ao início para caber tudo */
+        overflow-x: auto; /* Permite scroll lateral se a tela for muito pequena */
+        padding-bottom: 5px;
+    }
+    
+    .mini-logo img {
+        height: 25px; /* Ainda menor no mobile para não ocupar tela */
+    }
+
+    .main-nav ul {
+        flex-wrap: nowrap; /* Mantém os botões em linha no mobile */
+        gap: 10px;
+    }
 }
 
 /* 🟢 BOTÕES PADRONIZADOS (MENU, CTA, VOLTAR AO TOPO) */
