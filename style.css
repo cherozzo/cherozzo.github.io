@@ -1,117 +1,149 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - DESIGN DEFINITIVO */
+/* 🎨 ESTILO CHEROZZO RECORDS - CORRIGIDO */
 html { scroll-behavior: smooth; }
 
 body {
     background-color: #1a1a1a;
-    /* FOTO 7 COMO BACKDROP FIXO */
-    background-image: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url('foto7.jpg'); 
+    background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('foto7.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fdfae6;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Fonte mais limpa */
     margin: 0; padding: 0; line-height: 1.6;
 }
 
-/* 🏗️ HEADER - ALINHAMENTO MATEMÁTICO */
+/* 🔗 RESET DE LINKS (Remove sublinhados de tudo) */
+a, a:hover, a:visited, a:active {
+    text-decoration: none !important;
+    color: inherit;
+    outline: none;
+}
+
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO */
 header {
-    background-color: rgba(20, 20, 20, 0.96);
-    height: 85px; /* Altura controlada */
+    background-color: rgba(15, 15, 15, 0.98);
+    height: 80px;
     display: flex;
-    align-items: center; /* Centraliza verticalmente o nav-container */
+    align-items: center;
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
 }
 
 .nav-container {
     display: flex; 
-    align-items: center; /* Centraliza a logo com os botões */
+    align-items: center; 
     justify-content: center;
-    gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
     width: 100%;
 }
 
-/* 👁️ MINI LOGO - MEXIDINHA ISOLADA */
 .mini-logo img { 
-    height: 55px; width: auto; display: block; 
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    height: 50px; width: auto; display: block; 
+    transition: transform 0.3s ease; 
 }
-.mini-logo:hover img { transform: scale(1.05); } 
+.mini-logo:hover img { transform: scale(1.03); } 
 
-/* 🟢 MENU - PÍLULAS CENTRALIZADAS */
+/* 🟢 BOTÕES PÍLULA - FONTE E ESTILO CORRIGIDOS */
 .main-nav ul { 
     list-style: none; padding: 0; margin: 0; 
-    display: flex; align-items: center; gap: 12px; 
+    display: flex; align-items: center; gap: 10px; 
 }
 .main-nav a {
-    color: #fdfae6 !important; border: 1px solid #fdfae6; 
-    border-radius: 30px; text-transform: uppercase;
-    font-weight: bold; font-size: 0.7rem;
-    padding: 10px 18px; transition: 0.3s; 
-    display: flex; align-items: center; line-height: 1;
+    color: #fdfae6 !important; 
+    border: 2px solid #fdfae6; /* Borda um pouco mais firme */
+    border-radius: 40px; 
+    text-transform: uppercase;
+    font-weight: 700; 
+    font-size: 0.75rem;
+    padding: 10px 20px; 
+    transition: 0.3s; 
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 1px;
 }
 .main-nav a:hover { background-color: #fdfae6; color: #1a1a1a !important; }
 
-/* 🚀 CTA */
-.cta-wrapper { margin-top: 30px; text-align: center; }
-.btn-cta { 
-    color: #fdfae6 !important; border: 1px solid #fdfae6; border-radius: 30px; 
-    padding: 12px 24px; font-weight: bold; text-transform: uppercase;
+/* 🚀 HERO E VÍDEO - TRAVANDO O TAMANHO (NÃO ESTOURA MAIS) */
+.hero-image { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
 }
 
-/* 📏 SEÇÕES - ESPAÇAMENTO REDUZIDO E FUNDO TRANSLÚCIDO */
+.video-container-wrap { 
+    max-width: 800px; /* Trava o tamanho do vídeo */
+    margin: 0 auto; 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+#video-player { width: 100%; display: block; }
+
+/* 📏 SEÇÕES */
 section { 
-    padding: 40px 30px; 
-    max-width: 900px; 
-    margin: 30px auto; /* Reduz distância entre blocos */
-    background: rgba(26, 26, 26, 0.75); /* Revela a foto de fundo sutilmente */
-    border-radius: 15px;
-}
-
-/* FOTO 5 COMO DESTAQUE NO VÍDEO */
-#video-destaque {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('foto5.jpg');
-    background-size: cover;
-    background-position: center;
+    padding: 35px 20px; 
+    max-width: 850px; 
+    margin: 20px auto; 
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 12px;
 }
 
 h2 { 
     color: #fdfae6; border-bottom: 1px solid #333; 
-    padding-bottom: 8px; margin-bottom: 25px; 
+    padding-bottom: 10px; margin-bottom: 20px; 
     text-transform: uppercase; letter-spacing: 2px;
+    font-size: 1.4rem;
 }
 
-/* 🧬 UNIFORMIZAÇÃO DE TEXTO (BIO, PROD, CONTATO) */
-p, li { margin-bottom: 15px; line-height: 1.6; }
-section span, section span a { color: #ffffff !important; font-weight: bold; }
-
-/* 📸 GALERIA - MOVIMENTO ISOLADO */
+/* 📸 GALERIA */
 .gallery-grid {
-    display: grid !important; grid-template-columns: repeat(4, 1fr);
-    gap: 15px; margin-top: 20px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 .gallery-grid img { 
-    width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 10px;
-    transition: transform 0.5s ease;
+    width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 .gallery-grid img:hover { transform: scale(1.02); }
 
-/* 📍 MAPA */
-#mapa iframe { filter: grayscale(0.8) invert(0.9); } /* Estética underground */
+/* 📍 MAPA PRETO (Underground Style) */
+#mapa iframe { 
+    filter: grayscale(1) invert(0.9) contrast(1.2); 
+    border-radius: 15px;
+}
+
+/* 🔝 FOOTER CENTRALIZADO (Corrigindo o desvio para a direita) */
+.site-footer {
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;
+    clear: both;
+}
+
+.back-to-top { 
+    margin-bottom: 20px;
+    display: block;
+}
+
+.back-to-top a {
+    border: 1px solid #fdfae6;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    display: inline-block;
+}
+
+.site-footer p { 
+    font-size: 0.8rem; 
+    color: #777; 
+    margin: 0 auto;
+}
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
-    header { height: auto; padding: 15px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
-    .main-nav ul { flex-wrap: wrap; justify-content: center; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    section { margin: 15px; padding: 25px 15px; }
-}
-
-/* 🔊 SOM */
-#music-control {
-    position: fixed; bottom: 25px; right: 25px; width: 45px; height: 45px;
-    border-radius: 50%; background: #1a1a1a; border: 1px solid #fdfae6;
-    color: #fdfae6; cursor: pointer; z-index: 1001;
+    header { height: auto; padding: 20px 0; }
 }
