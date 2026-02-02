@@ -1,10 +1,10 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - REVISÃO FINAL */
+/* 🎨 ESTILO CHEROZZO RECORDS - REVISÃO DE ESPAÇAMENTOS */
 html { scroll-behavior: smooth; }
 body {
     background-color: #1a1a1a;
     color: #fdfae6;
     font-family: 'Tahoma', sans-serif;
-    margin: 0; padding: 0; line-height: 1.8;
+    margin: 0; padding: 0; line-height: 1.6; /* Altura de linha padrão para todo o site */
 }
 
 /* 🔗 LINKS */
@@ -17,14 +17,14 @@ a, a:visited, a:active {
 /* 🏗️ HEADER */
 header {
     background-color: #141414;
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
 }
 
 .nav-container {
     display: flex; align-items: center; justify-content: center;
-    gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
 }
 
 /* 👁️ MINI LOGO - MOVIMENTO MÍNIMO */
@@ -34,15 +34,15 @@ header {
     display: block; 
     transition: transform 0.4s ease; 
 }
-.mini-logo img:hover { transform: scale(1.02); } /* Reduzido de 1.05 para 1.02 */
+.mini-logo img:hover { transform: scale(1.02); } 
 
 /* 🟢 BOTÕES PÍLULA */
-.main-nav ul { list-style: none; padding: 0; display: flex; gap: 15px; margin: 0; }
+.main-nav ul { list-style: none; padding: 0; display: flex; gap: 12px; margin: 0; }
 .main-nav a, .btn-cta, .back-to-top a {
     color: #fdfae6 !important; border: 1px solid #fdfae6; 
     border-radius: 30px; text-transform: uppercase;
     font-weight: bold; letter-spacing: 1.5px; font-size: 0.75rem;
-    padding: 12px 22px; transition: 0.3s; display: inline-block;
+    padding: 10px 20px; transition: 0.3s; display: inline-block;
 }
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
     background-color: #fdfae6; color: #1a1a1a !important;
@@ -50,35 +50,37 @@ header {
 
 /* 🚀 CTA CENTRALIZADO */
 .cta-wrapper { 
-    margin-top: 60px; 
+    margin-top: 40px; 
     text-align: center; 
     width: 100%;
 }
 
-/* 📏 RESPIRO ENTRE SEÇÕES */
+/* 📏 AJUSTE DE ESPAÇO ENTRE BLOCOS (REDUZIDO) */
 section { 
-    padding: 100px 20px; 
+    padding: 50px 20px; /* Reduzido de 100px para 50px conforme solicitado */
     max-width: 1000px; 
     margin: 0 auto; 
 }
 
-/* 📏 UNIFORMIZAÇÃO DE ESPAÇAMENTO DE TEXTO (BIO, SERVIÇOS, CONTATO, PRODUÇÕES) */
+/* 📏 UNIFORMIZAÇÃO DE TEXTOS */
 h2 { 
     color: #fdfae6; 
     border-bottom: 2px solid #333; 
-    padding-bottom: 15px; 
+    padding-bottom: 10px; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
-    margin-bottom: 40px; 
+    margin-bottom: 30px; 
 }
 
-/* Todos os parágrafos e itens de lista com o mesmo padrão */
+/* Espaçamento idêntico para Bio, Serviços, Produções e Contato */
 p, li { 
-    margin-bottom: 20px; 
-    line-height: 1.8; 
+    margin-bottom: 15px; 
+    line-height: 1.6; 
 }
 
-/* 🖼️ HERO - MOVIMENTO MÍNIMO */
+ul { padding-left: 20px; } /* Alinhamento das listas de serviços */
+
+/* 🖼️ HERO - MOVIMENTO QUASE ZERO */
 .hero-image { 
     max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; 
     transition: transform 0.8s ease;
@@ -88,24 +90,23 @@ p, li {
 .video-container-wrap { width: 95%; max-width: 1200px; margin: 0 auto; border: 1px solid #333; border-radius: 15px; overflow: hidden; }
 #video-player { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 
-/* 📸 GALERIA - ZOOM QUASE IMPERCEPTÍVEL */
+/* 📸 GALERIA - ZOOM MÍNIMO */
 .gallery-grid {
     display: grid !important; 
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; max-width: 1000px; margin: 20px auto;
+    gap: 15px; max-width: 1000px; margin: 20px auto;
 }
 .gallery-grid img { 
     width: 100%; 
     aspect-ratio: 4 / 5; 
     object-fit: cover; 
-    border-radius: 15px; 
-    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    border-radius: 12px; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
 }
 .gallery-grid img:hover {
-    transform: scale(1.02); /* Reduzido de 1.03 para 1.02 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     z-index: 2;
-    cursor: pointer;
 }
 
 /* 🧬 DESTAQUE */
@@ -113,17 +114,17 @@ section span, section span a { color: #ffffff !important; font-weight: bold; }
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
-    section { padding: 60px 20px; }
-    .nav-container { flex-direction: column; gap: 20px; }
-    .mini-logo img { height: 55px; } 
-    .main-nav ul { justify-content: center; gap: 10px; flex-wrap: wrap; }
-    .main-nav a { font-size: 0.65rem; padding: 10px 15px; }
+    section { padding: 40px 20px; }
+    .nav-container { flex-direction: column; gap: 15px; }
+    .mini-logo img { height: 50px; } 
+    .main-nav ul { justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .main-nav a { font-size: 0.65rem; padding: 8px 12px; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 
-/* 🔝 BOTÃO VOLTAR */
-.back-to-top { margin: 80px 0; text-align: center; position: relative; z-index: 10; }
-footer p { text-align: center; font-size: 0.8rem; color: #666; padding-bottom: 50px; }
+/* 🔝 FOOTER */
+.back-to-top { margin: 40px 0; text-align: center; position: relative; z-index: 10; }
+footer p { text-align: center; font-size: 0.8rem; color: #666; padding-bottom: 30px; }
 
 /* 🔊 SOM */
 #music-control {
