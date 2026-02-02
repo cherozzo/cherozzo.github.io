@@ -1,9 +1,8 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - CONSOLIDADO FINAL */
+/* 🎨 ESTILO CHEROZZO RECORDS - FULL VERSION */
 html { scroll-behavior: smooth; }
 
 body {
     background-color: #1a1a1a;
-    /* Fundo Parallax com Foto 7 */
     background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('foto7.jpg'); 
     background-attachment: fixed;
     background-position: center;
@@ -14,7 +13,7 @@ body {
     margin: 0; padding: 0; line-height: 1.6;
 }
 
-/* 🔗 RESET DE LINKS E CLICÁVEIS (Branco Puro e Sem Sublinhado) */
+/* 🔗 LINKS E CLICÁVEIS (Branco Puro e Sem Sublinhado) */
 a, a:visited, a:active {
     text-decoration: none !important;
     color: #ffffff !important;
@@ -32,144 +31,72 @@ header {
 }
 
 .nav-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
-    width: 100%;
+    display: flex; align-items: center; justify-content: center;
+    gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
 }
 
-.mini-logo img { 
-    height: 50px; width: auto; display: block; 
-    transition: transform 0.3s ease; 
-}
+.mini-logo img { height: 50px; width: auto; transition: transform 0.3s ease; }
 .mini-logo:hover img { transform: scale(1.03); } 
 
-/* 🟢 BOTÕES PÍLULA (Branco e Moderno) */
-.main-nav ul { 
-    list-style: none; padding: 0; margin: 0; 
-    display: flex; align-items: center; gap: 10px; 
-}
+/* 🟢 MENU PÍLULA */
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 10px; }
 .main-nav a {
-    color: #ffffff !important; 
-    border: 2px solid #ffffff; 
-    border-radius: 40px; 
-    text-transform: uppercase;
-    font-weight: 700; 
-    font-size: 0.75rem;
-    padding: 10px 20px; 
-    transition: 0.3s; 
-    display: inline-block;
-    line-height: 1;
-    letter-spacing: 1px;
+    color: #ffffff !important; border: 2px solid #ffffff; border-radius: 40px; 
+    text-transform: uppercase; font-weight: 700; font-size: 0.75rem;
+    padding: 10px 18px; transition: 0.3s; display: inline-block; line-height: 1;
 }
 .main-nav a:hover { background-color: #ffffff; color: #1a1a1a !important; }
 
-/* 🚀 HERO E VÍDEO (Tamanhos Travados) */
-.hero-image { 
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    border-radius: 10px; 
-}
-
-.video-container-wrap { 
-    max-width: 800px; 
-    margin: 0 auto; 
-    border-radius: 12px; 
-    overflow: hidden; 
-}
+/* 🚀 HERO E VÍDEO (Travados) */
+.hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
+.video-container-wrap { max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
 #video-player { width: 100%; display: block; }
 
-/* 📏 SEÇÕES (Espaçamento Reduzido e Transparência) */
+/* 📏 SEÇÕES (Espaçamento Reduzido) */
 section { 
-    padding: 35px 20px; 
-    max-width: 850px; 
-    margin: 20px auto; 
-    background: rgba(26, 26, 26, 0.82);
-    border-radius: 12px;
+    padding: 35px 20px; max-width: 850px; margin: 20px auto; 
+    background: rgba(26, 26, 26, 0.85); border-radius: 12px;
 }
-
-/* Fundo da Foto 5 no bloco de vídeo */
 #video-destaque {
     background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('foto5.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; background-position: center;
 }
 
-h2 { 
-    color: #fdfae6; border-bottom: 1px solid #333; 
-    padding-bottom: 10px; margin-bottom: 20px; 
-    text-transform: uppercase; letter-spacing: 2px;
-    font-size: 1.4rem;
-}
-
-/* 🧬 UNIFORMIZAÇÃO DE TEXTOS */
+h2 { color: #fdfae6; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 1.4rem; }
 p, li { margin-bottom: 15px; line-height: 1.6; }
 section span, section span a { color: #ffffff !important; font-weight: bold; }
 
-/* 📸 GALERIA (Zoom Mínimo Isolado) */
-.gallery-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+/* 🚀 BOTÃO PRODUZIR (Destaque Centralizado) */
+.cta-wrapper { margin: 40px 0; text-align: center; width: 100%; display: flex; justify-content: center; }
+.btn-cta {
+    color: #ffffff !important; border: 2px solid #ffffff !important; border-radius: 40px !important; 
+    font-weight: 700; font-size: 0.8rem; padding: 14px 28px; transition: 0.3s; letter-spacing: 1.5px;
 }
-.gallery-grid img { 
-    width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;
-    transition: transform 0.3s ease;
-}
+.btn-cta:hover { background-color: #ffffff !important; color: #1a1a1a !important; transform: scale(1.05); }
+
+/* 📸 GALERIA */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; }
 .gallery-grid img:hover { transform: scale(1.02); }
 
 /* 📍 MAPA DARK */
-#mapa iframe { 
-    filter: grayscale(1) invert(0.9) contrast(1.2); 
-    border-radius: 15px;
-}
+#mapa iframe { filter: grayscale(1) invert(0.9) contrast(1.2); border-radius: 15px; }
 
 /* 🔝 FOOTER CENTRALIZADO */
-.site-footer {
-    text-align: center;
-    padding: 60px 20px;
-    width: 100%;
-    clear: both;
-}
-.back-to-top { margin-bottom: 20px; display: block; }
-.back-to-top a {
-    color: #ffffff !important;
-    border: 1px solid #ffffff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.7rem;
-    display: inline-block;
-}
-.site-footer p { font-size: 0.8rem; color: #777; margin-top: 10px; }
+.site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.back-to-top a { color: #ffffff !important; border: 1px solid #ffffff; padding: 10px 22px; border-radius: 30px; font-size: 0.7rem; }
+.back-to-top a:hover { background-color: #ffffff; color: #1a1a1a !important; }
 
 /* 🔊 BOTÃO DE MÚSICA */
 #music-control {
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
-    width: 55px; 
-    height: 55px;
-    border-radius: 50%; 
-    background: rgba(26, 26, 26, 0.9); 
-    border: 2px solid #ffffff;
-    color: #ffffff; 
-    z-index: 1001; 
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
+    position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px;
+    border-radius: 50%; background: rgba(26, 26, 26, 0.9); border: 2px solid #ffffff;
+    color: #ffffff; z-index: 1001; cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
-#music-control:hover { transform: scale(1.1); }
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
-    header { height: auto; padding: 20px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
+    header { height: auto; padding: 20px 0; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    section { margin: 15px; }
 }
