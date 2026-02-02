@@ -1,4 +1,4 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - REVISADO */
+/* 🎨 ESTILO CHEROZZO RECORDS - REVISÃO FINAL */
 html { scroll-behavior: smooth; }
 body {
     background-color: #1a1a1a;
@@ -27,14 +27,14 @@ header {
     gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
 }
 
-/* 👁️ MINI LOGO - AJUSTE FINO */
+/* 👁️ MINI LOGO - MOVIMENTO MÍNIMO */
 .mini-logo img { 
     height: 70px; 
     width: auto; 
     display: block; 
     transition: transform 0.4s ease; 
 }
-.mini-logo img:hover { transform: scale(1.05); }
+.mini-logo img:hover { transform: scale(1.02); } /* Reduzido de 1.05 para 1.02 */
 
 /* 🟢 BOTÕES PÍLULA */
 .main-nav ul { list-style: none; padding: 0; display: flex; gap: 15px; margin: 0; }
@@ -55,14 +55,14 @@ header {
     width: 100%;
 }
 
-/* 📏 ESPAÇAMENTOS ENTRE BLOCOS */
+/* 📏 RESPIRO ENTRE SEÇÕES */
 section { 
-    padding: 100px 20px; /* Mais respiro entre seções */
+    padding: 100px 20px; 
     max-width: 1000px; 
     margin: 0 auto; 
 }
 
-/* 📏 ESPAÇAMENTOS DE TEXTO */
+/* 📏 UNIFORMIZAÇÃO DE ESPAÇAMENTO DE TEXTO (BIO, SERVIÇOS, CONTATO, PRODUÇÕES) */
 h2 { 
     color: #fdfae6; 
     border-bottom: 2px solid #333; 
@@ -71,19 +71,24 @@ h2 {
     letter-spacing: 2px; 
     margin-bottom: 40px; 
 }
-p { margin-bottom: 25px; } /* Respiro entre parágrafos */
 
-/* 🖼️ HERO */
+/* Todos os parágrafos e itens de lista com o mesmo padrão */
+p, li { 
+    margin-bottom: 20px; 
+    line-height: 1.8; 
+}
+
+/* 🖼️ HERO - MOVIMENTO MÍNIMO */
 .hero-image { 
     max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; 
     transition: transform 0.8s ease;
 }
-.hero-image:hover { transform: scale(1.02); }
+.hero-image:hover { transform: scale(1.01); }
 
 .video-container-wrap { width: 95%; max-width: 1200px; margin: 0 auto; border: 1px solid #333; border-radius: 15px; overflow: hidden; }
 #video-player { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 
-/* 📸 GALERIA - MOVIMENTO PROFISSIONAL */
+/* 📸 GALERIA - ZOOM QUASE IMPERCEPTÍVEL */
 .gallery-grid {
     display: grid !important; 
     grid-template-columns: repeat(4, 1fr);
@@ -94,11 +99,11 @@ p { margin-bottom: 25px; } /* Respiro entre parágrafos */
     aspect-ratio: 4 / 5; 
     object-fit: cover; 
     border-radius: 15px; 
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
 }
 .gallery-grid img:hover {
-    transform: scale(1.03); /* Zoom elegante */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
+    transform: scale(1.02); /* Reduzido de 1.03 para 1.02 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     z-index: 2;
     cursor: pointer;
 }
