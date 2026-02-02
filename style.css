@@ -1,134 +1,97 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - REVISÃO DE ESPAÇAMENTOS */
-html { scroll-behavior: smooth; }
-body {
-    background-color: #1a1a1a;
-    color: #fdfae6;
-    font-family: 'Tahoma', sans-serif;
-    margin: 0; padding: 0; line-height: 1.6; /* Altura de linha padrão para todo o site */
-}
-
-/* 🔗 LINKS */
-a, a:visited, a:active {
-    color: #fdfae6 !important;
-    text-decoration: none !important;
-    transition: 0.3s;
-}
-
-/* 🏗️ HEADER */
+/* 🏗️ HEADER - ALINHAMENTO ABSOLUTO */
 header {
     background-color: #141414;
-    padding: 15px 0;
-    position: sticky; top: 0; z-index: 1000;
+    padding: 10px 0;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente todo o conteúdo do header */
 }
 
 .nav-container {
-    display: flex; align-items: center; justify-content: center;
-    gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
-}
-
-/* 👁️ MINI LOGO - MOVIMENTO MÍNIMO */
-.mini-logo img { 
-    height: 70px; 
-    width: auto; 
-    display: block; 
-    transition: transform 0.4s ease; 
-}
-.mini-logo img:hover { transform: scale(1.02); } 
-
-/* 🟢 BOTÕES PÍLULA */
-.main-nav ul { list-style: none; padding: 0; display: flex; gap: 12px; margin: 0; }
-.main-nav a, .btn-cta, .back-to-top a {
-    color: #fdfae6 !important; border: 1px solid #fdfae6; 
-    border-radius: 30px; text-transform: uppercase;
-    font-weight: bold; letter-spacing: 1.5px; font-size: 0.75rem;
-    padding: 10px 20px; transition: 0.3s; display: inline-block;
-}
-.main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
-    background-color: #fdfae6; color: #1a1a1a !important;
-}
-
-/* 🚀 CTA CENTRALIZADO */
-.cta-wrapper { 
-    margin-top: 40px; 
-    text-align: center; 
+    display: flex; 
+    align-items: center; /* Alinha a logo com a pílula do menu */
+    justify-content: center;
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px;
     width: 100%;
 }
 
-/* 📏 AJUSTE DE ESPAÇO ENTRE BLOCOS (REDUZIDO) */
+/* 👁️ MINI LOGO - VOLTAR A MEXER */
+.mini-logo {
+    display: flex;
+    align-items: center;
+}
+
+.mini-logo img { 
+    height: 55px; /* Tamanho otimizado para alinhar com as pílulas */
+    width: auto; 
+    display: block; 
+    transition: transform 0.3s ease-out; /* Base da animação */
+}
+
+.mini-logo:hover img { 
+    transform: scale(1.05); /* Mexidinha sutil ao passar o mouse */
+}
+
+/* 🟢 MENU - CORREÇÃO DE DESALINHAMENTO */
+.main-nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; /* Remove margens que desalinhariam o menu */
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+
+.main-nav li {
+    display: flex;
+    align-items: center; /* Garante que cada item da lista esteja centralizado */
+}
+
+.main-nav a {
+    color: #fdfae6 !important; 
+    border: 1px solid #fdfae6; 
+    border-radius: 30px; 
+    text-transform: uppercase;
+    font-weight: bold; 
+    font-size: 0.7rem;
+    padding: 8px 16px; 
+    transition: 0.3s; 
+    display: inline-block;
+    line-height: 1; /* Mantém o texto no centro exato da pílula */
+}
+
+/* 📏 ESPAÇO REDUZIDO ENTRE BLOCOS (Conforme fotos de erro) */
 section { 
-    padding: 50px 20px; /* Reduzido de 100px para 50px conforme solicitado */
+    padding: 30px 20px; /* Reduzi para aproximar os títulos do conteúdo anterior */
     max-width: 1000px; 
     margin: 0 auto; 
 }
 
-/* 📏 UNIFORMIZAÇÃO DE TEXTOS */
 h2 { 
-    color: #fdfae6; 
-    border-bottom: 2px solid #333; 
-    padding-bottom: 10px; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    margin-bottom: 30px; 
+    margin-top: 0; /* Tira o espaço extra no topo do título */
+    margin-bottom: 20px; 
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
 }
 
-/* Espaçamento idêntico para Bio, Serviços, Produções e Contato */
-p, li { 
-    margin-bottom: 15px; 
-    line-height: 1.6; 
+/* 📸 GALERIA E IMAGENS - MOVIMENTO MÍNIMO */
+.hero-image, .gallery-grid img {
+    transition: transform 0.4s ease-in-out;
 }
 
-ul { padding-left: 20px; } /* Alinhamento das listas de serviços */
-
-/* 🖼️ HERO - MOVIMENTO QUASE ZERO */
-.hero-image { 
-    max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; 
-    transition: transform 0.8s ease;
-}
-.hero-image:hover { transform: scale(1.01); }
-
-.video-container-wrap { width: 95%; max-width: 1200px; margin: 0 auto; border: 1px solid #333; border-radius: 15px; overflow: hidden; }
-#video-player { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
-
-/* 📸 GALERIA - ZOOM MÍNIMO */
-.gallery-grid {
-    display: grid !important; 
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px; max-width: 1000px; margin: 20px auto;
-}
-.gallery-grid img { 
-    width: 100%; 
-    aspect-ratio: 4 / 5; 
-    object-fit: cover; 
-    border-radius: 12px; 
-    transition: transform 0.4s ease, box-shadow 0.4s ease; 
-}
-.gallery-grid img:hover {
-    transform: scale(1.02); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    z-index: 2;
+.hero-image:hover, .gallery-grid img:hover {
+    transform: scale(1.02); /* Movimento quase imperceptível para manter a elegância */
 }
 
-/* 🧬 DESTAQUE */
-section span, section span a { color: #ffffff !important; font-weight: bold; }
-
-/* 📱 MOBILE */
-@media screen and (max-width: 768px) {
-    section { padding: 40px 20px; }
-    .nav-container { flex-direction: column; gap: 15px; }
-    .mini-logo img { height: 50px; } 
-    .main-nav ul { justify-content: center; gap: 8px; flex-wrap: wrap; }
-    .main-nav a { font-size: 0.65rem; padding: 8px 12px; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-}
-
-/* 🔝 FOOTER */
-.back-to-top { margin: 40px 0; text-align: center; position: relative; z-index: 10; }
-footer p { text-align: center; font-size: 0.8rem; color: #666; padding-bottom: 30px; }
-
-/* 🔊 SOM */
-#music-control {
-    position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
-    border-radius: 50%; background: #1a1a1a; border: 1px solid #fdfae6;
-    color: #fdfae6; z-index: 1001; display: flex; align-items: center; justify-content: center;
+/* 🧬 UNIFORMIZAÇÃO DOS LINKS DE PRODUÇÕES E CONTATO */
+#producoes p, #contato p {
+    margin-bottom: 12px; /* Mesma distância dos parágrafos da Bio */
+    display: flex;
+    align-items: center;
 }
