@@ -36,7 +36,7 @@ header {
 }
 
 .mini-logo img {
-    height: 55px; /* Tamanho menor para harmonizar com a altura dos botões */
+    height: 60px; /* Tamanho menor para harmonizar com a altura dos botões */
     width: auto;
     transition: transform 0.3s ease;
     display: block;
