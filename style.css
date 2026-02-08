@@ -1,7 +1,8 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CORRIGIDO */
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
+* { box-sizing: border-box; } /* Essencial para alinhamento no Opera */
+
 html { 
     scroll-behavior: smooth;
-    /* Trava o zoom esquisito no mobile */
     touch-action: manipulation; 
 }
 
@@ -13,24 +14,25 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fdfae6;
-    font-family: 'Tahoma', sans-serif; /* Fonte Tahoma conforme sua preferência */
+    font-family: 'Tahoma', sans-serif;
     margin: 0; padding: 0; line-height: 1.6;
-    overflow-x: hidden; /* Impede scroll lateral no celular */
+    overflow-x: hidden; 
 }
 
-/* 🔗 LINKS E CLICÁVEIS (Branco Puro e Sem Sublinhado) */
+/* 🔗 LINKS E CLICÁVEIS */
 a, a:visited, a:active {
     text-decoration: none !important;
     color: #ffffff !important;
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO (Correção do Desalinhamento) */
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
 header {
     background-color: rgba(12, 12, 12, 0.98);
-    height: 85px; /* Altura fixa confortável */
+    height: 85px; 
     display: flex;
-    align-items: center; /* Centraliza verticalmente o nav-container */
+    align-items: center;
+    justify-content: center;
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
     width: 100%;
@@ -38,27 +40,19 @@ header {
 
 .nav-container {
     display: flex; 
-    align-items: center; /* Garante que logo e menu fiquem na mesma linha média */
+    align-items: center; 
     justify-content: center;
     gap: 35px; 
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 20px; 
     width: 100%;
-    height: 100%; /* Ocupa toda a altura do header para alinhar */
 }
 
-.mini-logo img { 
-    height: 45px; /* Tamanho fixo para não empurrar o menu */
-    width: auto; 
-    display: block; 
-}
+.mini-logo img { height: 45px; width: auto; display: block; }
 
-/* 🟢 PÍLULAS PADRONIZADAS (Sem Negrito Excessivo e Tamanho Único) */
-.main-nav ul { 
-    list-style: none; padding: 0; margin: 0; 
-    display: flex; align-items: center; gap: 15px; 
-}
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
 .main-nav a, 
 .btn-cta, 
@@ -68,27 +62,30 @@ header {
     border: 2px solid #ffffff !important; 
     border-radius: 40px !important; 
     text-transform: uppercase !important;
-    font-weight: 400 !important; /* TIRANDO O NEGRITO PESADO */
+    font-weight: 400 !important; 
     font-size: 0.72rem !important;
-    padding: 10px 20px !important; /* Ajuste fino do tamanho */
-    transition: all 0.3s ease !important; 
+    
+    /* Correção de alinhamento vertical no Opera */
+    height: 38px; 
+    padding: 0 20px !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
     line-height: 1 !important;
+    
+    transition: all 0.3s ease !important; 
     letter-spacing: 1.2px !important;
     background-color: transparent !important;
-    white-space: nowrap; /* Impede que o texto quebre dentro da pílula */
+    white-space: nowrap;
 }
 
-/* Efeito Hover */
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
     background-color: #ffffff !important;
     color: #1a1a1a !important;
     transform: scale(1.03);
 }
 
-/* 🚀 SEÇÕES E RESPONSIVIDADE (Travando o vídeo e galeria) */
+/* 🚀 SEÇÕES */
 section { 
     padding: 40px 25px; 
     max-width: 850px; 
@@ -102,21 +99,38 @@ section {
     background-size: cover; background-position: center;
 }
 
+/* 📸 IMAGENS E VÍDEO (Trava de Tamanho) */
+.hero-image { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
+}
+
 .video-container-wrap { 
-    max-width: 100%; /* Garante que não estoure no celular */
+    width: 100%; 
+    max-width: 800px; 
     margin: 0 auto; 
     border-radius: 12px; 
     overflow: hidden; 
 }
 #video-player { width: 100%; display: block; }
 
-/* 🔝 FOOTER CENTRALIZADO */
-.site-footer { 
-    text-align: center; padding: 60px 20px; width: 100%; 
-    display: flex; flex-direction: column; align-items: center; 
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
+
+/* 📍 MAPA MODO DARK */
+#mapa iframe { 
+    filter: grayscale(1) invert(0.9) contrast(1.2); /* Esta linha cria o modo dark */
+    border-radius: 15px; 
+    width: 100%;
 }
 
-/* 🔊 BOTÃO DE MÚSICA (Ajustado para não sumir/cortar) */
+/* 🔝 FOOTER */
+.site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+/* 🔊 BOTÃO DE MÚSICA */
 #music-control {
     position: fixed; bottom: 30px; right: 30px; 
     width: 50px; height: 50px;
@@ -125,17 +139,28 @@ section {
     display: flex; align-items: center; justify-content: center;
 }
 
-/* 📱 MOBILE (Correção de zoom e botão de play) */
+/* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
 @media screen and (max-width: 768px) {
     header { height: auto; padding: 15px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .main-nav a { font-size: 0.65rem !important; padding: 8px 14px !important; }
     
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    /* Pílulas menores no mobile */
+    .main-nav a { 
+        height: 32px; 
+        font-size: 0.62rem !important; 
+        padding: 0 12px !important; 
+    }
+
+    /* Impede imagens de estourarem a tela */
+    .hero-image, .video-container-wrap, section {
+        max-width: 92%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     
     #music-control {
-        bottom: 15px; right: 15px; /* Move um pouco para a quina no mobile */
-        width: 45px; height: 45px;
-    }
-}
+        bottom: 15px; right: 15px; 
+        width: 42px; height:
