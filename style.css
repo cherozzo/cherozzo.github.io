@@ -1,8 +1,7 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - CORREÇÃO MILIMÉTRICA OPERA */
-* { box-sizing: border-box; } /* Garante que bordas não empurrem o layout */
-
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CORRIGIDO */
 html { 
     scroll-behavior: smooth;
+    /* Trava o zoom esquisito no mobile */
     touch-action: manipulation; 
 }
 
@@ -14,52 +13,51 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fdfae6;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Tahoma', sans-serif; /* Fonte Tahoma conforme sua preferência */
     margin: 0; padding: 0; line-height: 1.6;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Impede scroll lateral no celular */
 }
 
-/* 🔗 RESET LINKS */
+/* 🔗 LINKS E CLICÁVEIS (Branco Puro e Sem Sublinhado) */
 a, a:visited, a:active {
     text-decoration: none !important;
     color: #ffffff !important;
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER - ALINHAMENTO ABSOLUTO (Correção Opera) */
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO (Correção do Desalinhamento) */
 header {
     background-color: rgba(12, 12, 12, 0.98);
-    height: 85px; /* Altura total da faixa */
+    height: 85px; /* Altura fixa confortável */
     display: flex;
-    align-items: center; /* Centraliza o nav-container verticalmente */
-    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o nav-container */
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
     width: 100%;
-    padding: 0;
 }
 
 .nav-container {
     display: flex; 
-    align-items: center; 
+    align-items: center; /* Garante que logo e menu fiquem na mesma linha média */
     justify-content: center;
     gap: 35px; 
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 20px; 
     width: 100%;
+    height: 100%; /* Ocupa toda a altura do header para alinhar */
 }
 
 .mini-logo img { 
-    height: 45px; 
+    height: 45px; /* Tamanho fixo para não empurrar o menu */
     width: auto; 
     display: block; 
 }
 
-/* 🟢 PÍLULAS PADRONIZADAS COM ALTURA TRAVADA (Fim do desalinhamento) */
+/* 🟢 PÍLULAS PADRONIZADAS (Sem Negrito Excessivo e Tamanho Único) */
 .main-nav ul { 
     list-style: none; padding: 0; margin: 0; 
-    display: flex; align-items: center; gap: 12px; 
+    display: flex; align-items: center; gap: 15px; 
 }
 
 .main-nav a, 
@@ -70,31 +68,27 @@ header {
     border: 2px solid #ffffff !important; 
     border-radius: 40px !important; 
     text-transform: uppercase !important;
-    font-weight: 400 !important; 
+    font-weight: 400 !important; /* TIRANDO O NEGRITO PESADO */
     font-size: 0.72rem !important;
-    
-    /* A MÁGICA ESTÁ AQUI: */
-    height: 38px; /* Altura fixa para todos */
-    padding: 0 22px !important; /* Só padding nas laterais */
-    display: inline-flex !important;
-    align-items: center; /* Centraliza o texto no centro da altura de 38px */
-    justify-content: center;
-    line-height: 1 !important; /* Mata o respiro natural da fonte Tahoma */
-    
+    padding: 10px 20px !important; /* Ajuste fino do tamanho */
     transition: all 0.3s ease !important; 
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1 !important;
     letter-spacing: 1.2px !important;
     background-color: transparent !important;
-    white-space: nowrap;
+    white-space: nowrap; /* Impede que o texto quebre dentro da pílula */
 }
 
-/* Hover Unificado */
+/* Efeito Hover */
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
     background-color: #ffffff !important;
     color: #1a1a1a !important;
     transform: scale(1.03);
 }
 
-/* 🚀 SEÇÕES E RESPONSIVIDADE */
+/* 🚀 SEÇÕES E RESPONSIVIDADE (Travando o vídeo e galeria) */
 section { 
     padding: 40px 25px; 
     max-width: 850px; 
@@ -108,31 +102,21 @@ section {
     background-size: cover; background-position: center;
 }
 
-.hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
-.video-container-wrap { max-width: 100%; margin: 0 auto; border-radius: 12px; overflow: hidden; }
+.video-container-wrap { 
+    max-width: 100%; /* Garante que não estoure no celular */
+    margin: 0 auto; 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
 #video-player { width: 100%; display: block; }
 
-h2 { color: #fdfae6; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 1.4rem; }
-p, li { margin-bottom: 15px; line-height: 1.6; }
-section span, section span a { color: #ffffff !important; font-weight: bold; }
-
-/* 🚀 WRAPPERS */
-.cta-wrapper, .back-to-top { 
-    display: flex; justify-content: center; align-items: center; width: 100%; margin: 35px 0; 
+/* 🔝 FOOTER CENTRALIZADO */
+.site-footer { 
+    text-align: center; padding: 60px 20px; width: 100%; 
+    display: flex; flex-direction: column; align-items: center; 
 }
 
-/* 📸 GALERIA */
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; }
-
-/* 📍 MAPA */
-#mapa iframe { filter: grayscale(1) invert(0.9) contrast(1.2); border-radius: 15px; }
-
-/* 🔝 FOOTER */
-.site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
-.site-footer p { font-size: 0.8rem; color: #777; margin-top: 15px; }
-
-/* 🔊 BOTÃO DE MÚSICA (Ajustado para mobile tmb) */
+/* 🔊 BOTÃO DE MÚSICA (Ajustado para não sumir/cortar) */
 #music-control {
     position: fixed; bottom: 30px; right: 30px; 
     width: 50px; height: 50px;
@@ -141,19 +125,17 @@ section span, section span a { color: #ffffff !important; font-weight: bold; }
     display: flex; align-items: center; justify-content: center;
 }
 
-/* 📱 MOBILE (Suavização final) */
+/* 📱 MOBILE (Correção de zoom e botão de play) */
 @media screen and (max-width: 768px) {
     header { height: auto; padding: 15px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
-    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 8px; }
-    
-    /* Pílula mobile com altura menor */
-    .main-nav a { 
-        height: 32px; 
-        font-size: 0.65rem !important; 
-        padding: 0 14px !important; 
-    }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .main-nav a { font-size: 0.65rem !important; padding: 8px 14px !important; }
     
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    #music-control { bottom: 15px; right: 15px; width: 42px; height: 42px; }
+    
+    #music-control {
+        bottom: 15px; right: 15px; /* Move um pouco para a quina no mobile */
+        width: 45px; height: 45px;
+    }
 }
