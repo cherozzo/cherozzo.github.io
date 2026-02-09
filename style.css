@@ -99,6 +99,15 @@ section {
     background-size: cover; background-position: center;
 }
 
+/* 🚀 AJUSTE DE CENTRALIZAÇÃO DO CTA E WRAPPERS */
+.cta-wrapper, .back-to-top {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;             
+    margin: 35px 0;          
+}
+
 /* 📸 IMAGENS E VÍDEO (Trava de Tamanho) */
 .hero-image { 
     max-width: 100%; 
@@ -122,7 +131,7 @@ section {
 
 /* 📍 MAPA MODO DARK */
 #mapa iframe { 
-    filter: grayscale(1) invert(0.9) contrast(1.2); /* Esta linha cria o modo dark */
+    filter: grayscale(1) invert(0.9) contrast(1.2); 
     border-radius: 15px; 
     width: 100%;
 }
@@ -145,7 +154,6 @@ section {
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
     
-    /* Pílulas menores no mobile */
     .main-nav a { 
         height: 32px; 
         font-size: 0.62rem !important; 
@@ -163,4 +171,6 @@ section {
     
     #music-control {
         bottom: 15px; right: 15px; 
-        width: 42px; height:
+        width: 42px; height: 42px;
+    }
+}
