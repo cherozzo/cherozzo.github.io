@@ -1,5 +1,5 @@
 /* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
-* { box-sizing: border-box; } /* Essencial para alinhamento milimétrico */
+* { box-sizing: border-box; } 
 
 html { 
     scroll-behavior: smooth;
@@ -53,7 +53,7 @@ header {
 
 .mini-logo img { height: 45px; width: auto; display: block; }
 
-/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
+/* 🟢 PÍLULAS PADRONIZADAS (Menu e CTA) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
 .main-nav a, 
@@ -93,56 +93,61 @@ section {
     border-radius: 12px;
 }
 
-#video-destaque {
-    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url('foto5.jpg');
-    background-size: cover; background-position: center;
+/* 🎵 GRID DE PRODUÇÕES (Thumbnails Clicáveis) */
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 20px 0;
 }
 
-/* 🎵 ESTILO DAS PRODUÇÕES COM THUMBNAILS */
-.track-item {
+.prod-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px;
-    transition: 0.3s ease;
-    border: 1px solid transparent;
+    text-decoration: none !important;
+    transition: transform 0.3s ease;
 }
 
-.track-item:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
+/* O Movimento de Escala ao passar o mouse */
+.prod-card:hover {
+    transform: scale(1.05);
 }
 
-.thumb-container {
-    width: 110px; height: 65px;
-    overflow: hidden; border-radius: 6px;
-    border: 1px solid #444; flex-shrink: 0;
-}
-
-.track-thumb { width: 100%; height: 100%; object-fit: cover; }
-
-.track-info p {
-    margin: 0 !important;
-    font-weight: bold;
-    font-size: 1.05rem;
-    color: #fdfae6;
-}
-
-.play-link {
-    font-size: 0.72rem;
-    color: #ffffff !important;
-    opacity: 0.6;
-    letter-spacing: 1.2px;
+/* Pílula com o nome acima da imagem */
+.prod-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    display: inline-block;
-    margin-top: 5px;
+    letter-spacing: 1.2px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
-.play-link:hover { opacity: 1; text-decoration: underline !important; }
+.prod-card:hover .prod-pill {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Container da Imagem (Thumbnail YouTube) */
+.prod-thumb-wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prod-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* 🚀 AJUSTE DE CENTRALIZAÇÃO CTA */
 .cta-wrapper, .back-to-top {
@@ -153,7 +158,7 @@ section {
     margin: 35px 0;          
 }
 
-/* 📸 IMAGENS E VÍDEO */
+/* 📸 GALERIA E VÍDEOS */
 .hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
 .video-container-wrap { width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
 #video-player { width: 100%; display: block; }
@@ -181,9 +186,10 @@ section {
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
     .main-nav a { height: 32px; font-size: 0.62rem !important; padding: 0 12px !important; }
+    
+    .production-grid { grid-template-columns: 1fr; gap: 25px; } /* 1 coluna no celular */
+    
     .hero-image, .video-container-wrap, section { max-width: 92%; margin-left: auto; margin-right: auto; }
-    .track-item { gap: 15px; padding: 10px; }
-    .thumb-container { width: 85px; height: 50px; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     #music-control { bottom: 15px; right: 15px; width: 42px; height: 42px; }
 }
