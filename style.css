@@ -1,7 +1,10 @@
 /* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
-* { box-sizing: border-box; } 
+* { box-sizing: border-box; } /* Essencial para alinhamento no Opera */
 
-html { scroll-behavior: smooth; touch-action: manipulation; }
+html { 
+    scroll-behavior: smooth;
+    touch-action: manipulation; 
+}
 
 body {
     background-color: #1a1a1a;
@@ -16,99 +19,158 @@ body {
     overflow-x: hidden; 
 }
 
-/* 🏗️ HEADER COM FOTO (miniheader.png) */
+/* 🔗 LINKS E CLICÁVEIS */
+a, a:visited, a:active {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    transition: 0.3s ease;
+}
+
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
 header {
-    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
-    background-size: cover; background-position: center;
-    height: 85px; display: flex; align-items: center; justify-content: center;
-    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #2a2a2a; width: 100%;
+    background-color: rgba(12, 12, 12, 0.98);
+    height: 85px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+    width: 100%;
 }
 
 .nav-container {
-    display: flex; align-items: center; justify-content: center; gap: 35px; 
-    max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 35px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    width: 100%;
 }
 
-/* 🟢 PÍLULAS MENU E CTA */
-.main-nav a, .btn-cta, .back-to-top a {
+.mini-logo img { height: 45px; width: auto; display: block; }
+
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
+
+.main-nav a, 
+.btn-cta, 
+.back-to-top a {
     font-family: 'Tahoma', sans-serif !important;
-    border: 2px solid #ffffff !important; border-radius: 40px !important; 
-    text-transform: uppercase !important; font-size: 0.72rem !important;
-    height: 38px; padding: 0 20px !important; display: inline-flex !important;
-    align-items: center; justify-content: center; transition: 0.3s ease !important; 
-    background-color: transparent !important; color: #ffffff !important;
-    text-decoration: none !important;
-}
-
-.main-nav a:hover, .btn-cta:hover { background-color: #ffffff !important; color: #1a1a1a !important; transform: scale(1.03); }
-
-/* 🎵 PRODUÇÕES EM LINHA COMPACTA (Vertical) */
-.production-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaço entre as linhas */
-    padding: 10px 0;
-}
-
-.prod-card-row {
-    display: flex;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important; 
+    border-radius: 40px !important; 
+    text-transform: uppercase !important;
+    font-weight: 400 !important; 
+    font-size: 0.72rem !important;
+    
+    /* Correção de alinhamento vertical no Opera */
+    height: 38px; 
+    padding: 0 20px !important;
+    display: inline-flex !important;
     align-items: center;
-    gap: 20px;
-    text-decoration: none !important;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.03);
+    justify-content: center;
+    line-height: 1 !important;
+    
+    transition: all 0.3s ease !important; 
+    letter-spacing: 1.2px !important;
+    background-color: transparent !important;
+    white-space: nowrap;
+}
+
+.main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    transform: scale(1.03);
+}
+
+/* 🚀 SEÇÕES */
+section { 
+    padding: 40px 25px; 
+    max-width: 850px; 
+    margin: 25px auto; 
+    background: rgba(22, 22, 22, 0.88); 
     border-radius: 12px;
-    transition: 0.3s ease;
 }
 
-.prod-card-row:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateX(10px); /* O movimento de deslizar pro lado */
+#video-destaque {
+    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url('foto5.jpg');
+    background-size: cover; background-position: center;
 }
 
-/* Thumbnail pequena */
-.prod-thumb-mini {
-    width: 100px; /* Bem pequena para ser discreta */
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 6px;
-    flex-shrink: 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* 🚀 AJUSTE DE CENTRALIZAÇÃO DO CTA E WRAPPERS */
+.cta-wrapper, .back-to-top {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;             
+    margin: 35px 0;          
 }
 
-.prod-thumb-mini img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Pílula de Nome na Linha */
-.prod-pill-inline {
-    background: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
+/* 📸 IMAGENS E VÍDEO (Trava de Tamanho) */
+.hero-image { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
 }
 
-.prod-card-row:hover .prod-pill-inline {
-    background: #ffffff;
-    color: #1a1a1a;
+.video-container-wrap { 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    border-radius: 12px; 
+    overflow: hidden; 
 }
+#video-player { width: 100%; display: block; }
 
-/* 🚀 SEÇÕES E CENTRALIZAÇÃO */
-section { padding: 40px 25px; max-width: 850px; margin: 25px auto; background: rgba(22, 22, 22, 0.88); border-radius: 12px; }
-.cta-wrapper, .back-to-top { display: flex; justify-content: center; width: 100%; margin: 35px 0; }
-
-/* 📸 GALERIA E MAPA */
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
-#mapa iframe { filter: grayscale(1) invert(0.9); border-radius: 15px; width: 100%; }
 
-/* 📱 MOBILE */
+/* 📍 MAPA MODO DARK */
+#mapa iframe { 
+    filter: grayscale(1) invert(0.9) contrast(1.2); 
+    border-radius: 15px; 
+    width: 100%;
+}
+
+/* 🔝 FOOTER */
+.site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+/* 🔊 BOTÃO DE MÚSICA */
+#music-control {
+    position: fixed; bottom: 30px; right: 30px; 
+    width: 50px; height: 50px;
+    border-radius: 50%; background: rgba(20, 20, 20, 0.9); border: 2px solid #ffffff;
+    color: #ffffff; z-index: 1001; cursor: pointer; 
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
 @media screen and (max-width: 768px) {
-    .nav-container { flex-direction: column; gap: 15px; }
     header { height: auto; padding: 15px 0; }
-    .prod-thumb-mini { width: 80px; } /* Ainda menor no celular */
-    .prod-pill-inline { font-size: 0.6rem; padding: 4px 10px; }
+    .nav-container { flex-direction: column; gap: 15px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    
+    .main-nav a { 
+        height: 32px; 
+        font-size: 0.62rem !important; 
+        padding: 0 12px !important; 
+    }
+
+    /* Impede imagens de estourarem a tela */
+    .hero-image, .video-container-wrap, section {
+        max-width: 92%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    
+    #music-control {
+        bottom: 15px; right: 15px; 
+        width: 42px; height: 42px;
+    }
 }
