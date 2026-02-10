@@ -1,5 +1,5 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
-* { box-sizing: border-box; } /* Essencial para alinhamento no Opera */
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL COM HEADER FOTO */
+* { box-sizing: border-box; } /* Essencial para alinhamento milimétrico */
 
 html { 
     scroll-behavior: smooth;
@@ -8,7 +8,7 @@ html {
 
 body {
     background-color: #1a1a1a;
-    background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)), url('foto7.jpg'); 
+    background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)), url('miniheader.png'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,9 +26,12 @@ a, a:visited, a:active {
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
+/* 🏗️ HEADER COM FOTO (foto3.jpg) */
 header {
-    background-color: rgba(12, 12, 12, 0.98);
+    /* Gradiente escuro sobre a foto para não "brigar" com o menu branco */
+    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('foto3.jpg'); 
+    background-size: cover;
+    background-position: center;
     height: 85px; 
     display: flex;
     align-items: center;
@@ -51,7 +54,7 @@ header {
 
 .mini-logo img { height: 45px; width: auto; display: block; }
 
-/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada para Alinhamento Vertical) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
 .main-nav a, 
@@ -65,7 +68,7 @@ header {
     font-weight: 400 !important; 
     font-size: 0.72rem !important;
     
-    /* Correção de alinhamento vertical no Opera */
+    /* Trava de altura para Opera e outros browsers */
     height: 38px; 
     padding: 0 20px !important;
     display: inline-flex !important;
@@ -99,7 +102,7 @@ section {
     background-size: cover; background-position: center;
 }
 
-/* 🚀 AJUSTE DE CENTRALIZAÇÃO DO CTA E WRAPPERS */
+/* 🚀 AJUSTE DE CENTRALIZAÇÃO (CTA e Voltar ao Topo) */
 .cta-wrapper, .back-to-top {
     display: flex;
     justify-content: center; 
@@ -108,22 +111,9 @@ section {
     margin: 35px 0;          
 }
 
-/* 📸 IMAGENS E VÍDEO (Trava de Tamanho) */
-.hero-image { 
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    border-radius: 10px; 
-}
-
-.video-container-wrap { 
-    width: 100%; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    border-radius: 12px; 
-    overflow: hidden; 
-}
+/* 📸 IMAGENS E VÍDEO (Responsividade Travada) */
+.hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
+.video-container-wrap { width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
 #video-player { width: 100%; display: block; }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -148,9 +138,9 @@ section {
     display: flex; align-items: center; justify-content: center;
 }
 
-/* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
+/* 📱 MOBILE (Correção Final) */
 @media screen and (max-width: 768px) {
-    header { height: auto; padding: 15px 0; }
+    header { height: auto; padding: 15px 0; background-attachment: scroll; }
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
     
@@ -160,7 +150,6 @@ section {
         padding: 0 12px !important; 
     }
 
-    /* Impede imagens de estourarem a tela */
     .hero-image, .video-container-wrap, section {
         max-width: 92%; 
         margin-left: auto;
@@ -168,9 +157,5 @@ section {
     }
 
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    
-    #music-control {
-        bottom: 15px; right: 15px; 
-        width: 42px; height: 42px;
-    }
+    #music-control { bottom: 15px; right: 15px; width: 42px; height: 42px; }
 }
