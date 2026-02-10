@@ -29,7 +29,7 @@ a, a:visited, a:active {
 /* 🏗️ HEADER COM FOTO */
 header {
     /* Gradiente escuro sobre a foto para não "brigar" com o menu branco */
-    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('foto6.jpg'); 
+    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('foto5.jpg'); 
     background-size: cover;
     background-position: center;
     height: 85px; 
