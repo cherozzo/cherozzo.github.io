@@ -8,7 +8,7 @@ html {
 
 body {
     background-color: #1a1a1a;
-    background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)), url('miniheader.png'); 
+    background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)), url('foto7.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@ a, a:visited, a:active {
 /* 🏗️ HEADER COM FOTO (foto3.jpg) */
 header {
     /* Gradiente escuro sobre a foto para não "brigar" com o menu branco */
-    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('foto3.jpg'); 
+    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
     background-size: cover;
     background-position: center;
     height: 85px; 
