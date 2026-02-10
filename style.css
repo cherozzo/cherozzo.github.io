@@ -1,4 +1,4 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL COM HEADER FOTO */
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
 * { box-sizing: border-box; } /* Essencial para alinhamento milimétrico */
 
 html { 
@@ -26,9 +26,8 @@ a, a:visited, a:active {
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER COM FOTO */
+/* 🏗️ HEADER COM FOTO (miniheader.png) */
 header {
-    /* Gradiente escuro sobre a foto para não "brigar" com o menu branco */
     background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
     background-size: cover;
     background-position: center;
@@ -54,7 +53,7 @@ header {
 
 .mini-logo img { height: 45px; width: auto; display: block; }
 
-/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada para Alinhamento Vertical) */
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
 .main-nav a, 
@@ -67,15 +66,12 @@ header {
     text-transform: uppercase !important;
     font-weight: 400 !important; 
     font-size: 0.72rem !important;
-    
-    /* Trava de altura para Opera e outros browsers */
     height: 38px; 
     padding: 0 20px !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
     line-height: 1 !important;
-    
     transition: all 0.3s ease !important; 
     letter-spacing: 1.2px !important;
     background-color: transparent !important;
@@ -102,7 +98,53 @@ section {
     background-size: cover; background-position: center;
 }
 
-/* 🚀 AJUSTE DE CENTRALIZAÇÃO (CTA e Voltar ao Topo) */
+/* 🎵 ESTILO DAS PRODUÇÕES COM THUMBNAILS */
+.track-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.track-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.thumb-container {
+    width: 110px; height: 65px;
+    overflow: hidden; border-radius: 6px;
+    border: 1px solid #444; flex-shrink: 0;
+}
+
+.track-thumb { width: 100%; height: 100%; object-fit: cover; }
+
+.track-info p {
+    margin: 0 !important;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #fdfae6;
+}
+
+.play-link {
+    font-size: 0.72rem;
+    color: #ffffff !important;
+    opacity: 0.6;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.play-link:hover { opacity: 1; text-decoration: underline !important; }
+
+/* 🚀 AJUSTE DE CENTRALIZAÇÃO CTA */
 .cta-wrapper, .back-to-top {
     display: flex;
     justify-content: center; 
@@ -111,20 +153,15 @@ section {
     margin: 35px 0;          
 }
 
-/* 📸 IMAGENS E VÍDEO (Responsividade Travada) */
+/* 📸 IMAGENS E VÍDEO */
 .hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
 .video-container-wrap { width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
 #video-player { width: 100%; display: block; }
-
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
 
 /* 📍 MAPA MODO DARK */
-#mapa iframe { 
-    filter: grayscale(1) invert(0.9) contrast(1.2); 
-    border-radius: 15px; 
-    width: 100%;
-}
+#mapa iframe { filter: grayscale(1) invert(0.9) contrast(1.2); border-radius: 15px; width: 100%; }
 
 /* 🔝 FOOTER */
 .site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
@@ -138,24 +175,15 @@ section {
     display: flex; align-items: center; justify-content: center;
 }
 
-/* 📱 MOBILE (Correção Final) */
+/* 📱 MOBILE */
 @media screen and (max-width: 768px) {
     header { height: auto; padding: 15px 0; background-attachment: scroll; }
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    
-    .main-nav a { 
-        height: 32px; 
-        font-size: 0.62rem !important; 
-        padding: 0 12px !important; 
-    }
-
-    .hero-image, .video-container-wrap, section {
-        max-width: 92%; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+    .main-nav a { height: 32px; font-size: 0.62rem !important; padding: 0 12px !important; }
+    .hero-image, .video-container-wrap, section { max-width: 92%; margin-left: auto; margin-right: auto; }
+    .track-item { gap: 15px; padding: 10px; }
+    .thumb-container { width: 85px; height: 50px; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     #music-control { bottom: 15px; right: 15px; width: 42px; height: 42px; }
 }
