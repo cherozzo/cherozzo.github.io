@@ -1,5 +1,5 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - VERSÃO FINAL REVISADA */
-* { box-sizing: border-box; } 
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
+* { box-sizing: border-box; } /* Essencial para alinhamento no Opera */
 
 html { 
     scroll-behavior: smooth;
@@ -19,69 +19,95 @@ body {
     overflow-x: hidden; 
 }
 
-/* 🔗 LINKS */
+/* 🔗 LINKS E CLICÁVEIS */
 a, a:visited, a:active {
     text-decoration: none !important;
     color: #ffffff !important;
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER E MENU */
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
 header {
-    background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
-    background-size: cover; background-position: center;
-    height: 85px; display: flex; align-items: center; justify-content: center;
-    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #2a2a2a; width: 100%;
+    background-color: rgba(12, 12, 12, 0.98);
+    height: 85px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+    width: 100%;
 }
 
 .nav-container {
-    display: flex; align-items: center; justify-content: center; gap: 35px; 
-    max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 35px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    width: 100%;
 }
 
-.mini-logo img { height: 45px; width: auto; display: block; max-width: 180px; }
+.mini-logo img { height: 45px; width: auto; display: block; }
 
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
-/* 🟢 PÍLULAS (MENU, CTA, VOLTAR AO TOPO) */
-.main-nav a, .btn-cta, .back-to-top a {
+.main-nav a, 
+.btn-cta, 
+.back-to-top a {
     font-family: 'Tahoma', sans-serif !important;
-    border: 2px solid #ffffff !important; border-radius: 40px !important; 
-    text-transform: uppercase !important; font-size: 0.72rem !important;
-    height: 38px; padding: 0 20px !important; display: inline-flex !important;
-    align-items: center; justify-content: center; transition: 0.3s ease !important; 
-    background-color: transparent !important; color: #ffffff !important;
-    letter-spacing: 1.2px; white-space: nowrap;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important; 
+    border-radius: 40px !important; 
+    text-transform: uppercase !important;
+    font-weight: 400 !important; 
+    font-size: 0.72rem !important;
+    
+    /* Correção de alinhamento vertical no Opera */
+    height: 38px; 
+    padding: 0 20px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1 !important;
+    
+    transition: all 0.3s ease !important; 
+    letter-spacing: 1.2px !important;
+    background-color: transparent !important;
+    white-space: nowrap;
 }
 
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
-    background-color: #ffffff !important; color: #1a1a1a !important; transform: scale(1.03);
-}
-
-/* 🎯 CENTRALIZAÇÃO DO CTA */
-.cta-wrapper {
-    display: flex !important;
-    justify-content: center !important; 
-    align-items: center !important;
-    width: 100% !important;
-    margin: 40px 0 !important;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    transform: scale(1.03);
 }
 
 /* 🚀 SEÇÕES */
 section { 
-    padding: 40px 25px; max-width: 850px; margin: 25px auto; 
-    background: rgba(22, 22, 22, 0.88); border-radius: 12px; 
+    padding: 40px 25px; 
+    max-width: 850px; 
+    margin: 25px auto; 
+    background: rgba(22, 22, 22, 0.88); 
+    border-radius: 12px;
 }
 
-/* 🖼️ LOGO PRINCIPAL */
-.hero-image { max-width: 400px; height: auto; display: block; margin: 0 auto; }
-.hero-banner { background: transparent; padding: 60px 20px; }
-
-/* 🎵 PRODUÇÕES (4 COLUNAS) */
+/* 🎵 NOVO: AJUSTES DA SEÇÃO DE PRODUÇÕES (Conforme Esboço Visual) */
 .production-grid-final {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    padding: 20px 0;
 }
 
 .prod-thumb-link {
-    display: block; width: 100%; aspect-ratio: 16/9; overflow: hidden;
-    border-radius: 8px; transition: transform
+    display: block;
+    width: 100%;
+    max-width: 180px; 
+    aspect-ratio: 16/9; 
+    overflow: hidden;
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(25
