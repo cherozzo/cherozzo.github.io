@@ -165,7 +165,7 @@ section {
     aspect-ratio: 16/9; /* Mantém o formato de vídeo do YouTube */
     overflow: hidden;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: none;
     transition: transform 0.3s ease;
 }
 
