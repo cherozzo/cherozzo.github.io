@@ -28,7 +28,10 @@ a, a:visited, a:active {
 
 /* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
 header {
-    background-color: rgba(12, 12, 12, 0.98);
+    background-image: url('miniheader.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
     height: 85px; 
     display: flex;
     align-items: center;
