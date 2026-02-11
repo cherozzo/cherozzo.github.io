@@ -1,4 +1,4 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
+/* 🎨 ESTILO CHEROZZO RECORDS - VERSÃO FINAL CONSOLIDADA */
 * { box-sizing: border-box; } 
 
 html { 
@@ -19,162 +19,112 @@ body {
     overflow-x: hidden; 
 }
 
-/* 🔗 LINKS E CLICÁVEIS */
+/* 🔗 LINKS */
 a, a:visited, a:active {
     text-decoration: none !important;
     color: #ffffff !important;
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER COM FOTO */
+/* 🏗️ HEADER E MENU */
 header {
     background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
-    background-size: cover;
-    background-position: center;
-    height: 85px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky; top: 0; z-index: 1000;
-    border-bottom: 1px solid #2a2a2a;
-    width: 100%;
+    background-size: cover; background-position: center;
+    height: 85px; display: flex; align-items: center; justify-content: center;
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #2a2a2a; width: 100%;
 }
 
 .nav-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 35px; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 35px; 
+    max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
 }
 
-/* ✅ AJUSTE DO LOGO */
-.mini-logo img { 
-    height: 45px; 
-    width: auto; 
-    display: block; 
-    max-width: 180px; 
-}
+.mini-logo img { height: 45px; width: auto; display: block; max-width: 180px; }
 
-/* 🟢 PÍLULAS PADRONIZADAS (MENU E CTA) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
-.main-nav a, 
-.btn-cta, 
-.back-to-top a {
+/* 🟢 PÍLULAS (MENU, CTA, VOLTAR AO TOPO) */
+.main-nav a, .btn-cta, .back-to-top a {
     font-family: 'Tahoma', sans-serif !important;
-    color: #ffffff !important;
-    border: 2px solid #ffffff !important; 
-    border-radius: 40px !important; 
-    text-transform: uppercase !important;
-    font-weight: 400 !important; 
-    font-size: 0.72rem !important;
-    height: 38px; 
-    padding: 0 20px !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    line-height: 1 !important;
-    transition: all 0.3s ease !important; 
-    letter-spacing: 1.2px !important;
-    background-color: transparent !important;
-    white-space: nowrap;
+    border: 2px solid #ffffff !important; border-radius: 40px !important; 
+    text-transform: uppercase !important; font-size: 0.72rem !important;
+    height: 38px; padding: 0 20px !important; display: inline-flex !important;
+    align-items: center; justify-content: center; transition: 0.3s ease !important; 
+    background-color: transparent !important; color: #ffffff !important;
+    letter-spacing: 1.2px; white-space: nowrap;
 }
 
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
-    transform: scale(1.03);
+    background-color: #ffffff !important; color: #1a1a1a !important; transform: scale(1.03);
+}
+
+/* 🎯 CENTRALIZAÇÃO DO CTA (PRODUZIR MEU PROJETO) */
+.cta-wrapper {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    width: 100% !important;
+    margin: 40px 0 !important;
 }
 
 /* 🚀 SEÇÕES */
 section { 
-    padding: 40px 25px; 
-    max-width: 850px; 
-    margin: 25px auto; 
-    background: rgba(22, 22, 22, 0.88); 
-    border-radius: 12px;
+    padding: 40px 25px; max-width: 850px; margin: 25px auto; 
+    background: rgba(22, 22, 22, 0.88); border-radius: 12px; 
 }
 
-/* 🎯 CENTRALIZAÇÃO DO BOTÃO CD (CTA) */
-.cta-wrapper {
-    display: flex !important;
-    justify-content: center !important; 
-    align-items: center !important;     
-    width: 100% !important;             
-    margin: 40px 0 !important;
-    text-align: center;
+/* 🖼️ AJUSTE DO LOGO PRINCIPAL (Para não ficar enorme) */
+.hero-image { 
+    max-width: 400px; /* ✅ Ajuste aqui se quiser maior ou menor */
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
-/* 🎵 GRID DE PRODUÇÕES (CONFORME SEU ESBOÇO) */
+.hero-banner { background: transparent; padding: 60px 20px; }
+
+/* 🎵 NOSSA CRIAÇÃO: GRID DE PRODUÇÕES (4 COLUNAS) */
 .production-grid-final {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 15px;
-    padding: 20px 0;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 20px 0;
 }
 
 .prod-thumb-link {
-    display: block;
-    width: 100%;
-    max-width: 180px; 
-    aspect-ratio: 16/9; 
-    overflow: hidden;
-    border-radius: 8px; 
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin: 0 auto;
+    display: block; width: 100%; aspect-ratio: 16/9; overflow: hidden;
+    border-radius: 8px; transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.prod-thumb-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.prod-thumb-link img { width: 100%; height: 100%; object-fit: cover; }
+.prod-thumb-link:hover { transform: scale(1.05); border-color: #ffffff; }
 
-.prod-thumb-link:hover {
-    transform: scale(1.05);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-/* 📸 IMAGENS E VÍDEO */
-.hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
-.video-container-wrap { width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
-
-/* ✅ AJUSTE DA GALERIA */
-.gallery-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 12px; 
-}
+/* 📸 AJUSTE DA GALERIA */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 
 .gallery-grid img { 
     width: 100%; 
-    max-width: 180px; 
-    aspect-ratio: 1/1; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    margin: 0 auto;
+    max-width: 180px; /* ✅ Impede que as fotos fiquem gigantes */
+    aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; margin: 0 auto;
 }
 
-/* 🔊 BOTÃO DE MÚSICA */
+/* 🎥 VÍDEO */
+.video-container-wrap { width: 100%; border-radius: 12px; overflow: hidden; }
+#video-player { width: 100%; display: block; }
+
+/* 📍 MAPA */
+#mapa iframe { filter: grayscale(1) invert(0.9); border-radius: 15px; }
+
+/* 🔊 CONTROLE DE MÚSICA */
 #music-control {
-    position: fixed; bottom: 30px; right: 30px; 
-    width: 50px; height: 50px;
+    position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
     border-radius: 50%; background: rgba(20, 20, 20, 0.9); border: 2px solid #ffffff;
-    color: #ffffff; z-index: 1001; cursor: pointer; 
-    display: flex; align-items: center; justify-content: center;
+    color: #ffffff; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 1001;
 }
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
-    header { height: auto; padding: 15px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
-    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .production-grid-final { grid-template-columns: repeat(2, 1fr); }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .hero-image { max-width: 80%; }
+    .production-grid-final, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    section { max-width: 95%; }
 }
