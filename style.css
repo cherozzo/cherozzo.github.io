@@ -148,11 +148,41 @@ section {
     display: flex; align-items: center; justify-content: center;
 }
 
+/* 🎵 GRID DE PRODUÇÕES - INSERIR ANTES DO MOBILE */
+.production-grid-final {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 15px; /* Espaço entre as fotos */
+    padding: 20px 0;
+}
+
+.prod-thumb-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9; /* Mantém o formato de vídeo do YouTube */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.prod-thumb-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+.prod-thumb-link:hover {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
 /* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
 @media screen and (max-width: 768px) {
     header { height: auto; padding: 15px 0; }
     .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .production-grid-final { grid-template-columns: repeat(2, 1fr); }
     
     .main-nav a { 
         height: 32px; 
