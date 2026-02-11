@@ -52,7 +52,7 @@ header {
     width: 100%;
 }
 
-.mini-logo img { height: 45px; width: auto; display: block; transform: scale(1.02); }
+.mini-logo img { height: 45px; width: auto; display: block; }
 
 
 /* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
