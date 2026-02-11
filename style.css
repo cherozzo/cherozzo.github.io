@@ -1,5 +1,5 @@
-/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL COM HEADER FOTO */
-* { box-sizing: border-box; } /* Essencial para alinhamento milimétrico */
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
+* { box-sizing: border-box; } 
 
 html { 
     scroll-behavior: smooth;
@@ -26,7 +26,7 @@ a, a:visited, a:active {
     transition: 0.3s ease;
 }
 
-/* 🏗️ HEADER COM FOTO (miniheader.png) */
+/* 🏗️ HEADER COM FOTO */
 header {
     background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('miniheader.png'); 
     background-size: cover;
@@ -51,9 +51,15 @@ header {
     width: 100%;
 }
 
-.mini-logo img { height: 45px; width: auto; display: block; }
+/* ✅ AJUSTE DO LOGO */
+.mini-logo img { 
+    height: 45px; 
+    width: auto; 
+    display: block; 
+    max-width: 180px; 
+}
 
-/* 🟢 PÍLULAS PADRONIZADAS */
+/* 🟢 PÍLULAS PADRONIZADAS (MENU E CTA) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
 .main-nav a, 
@@ -93,21 +99,34 @@ section {
     border-radius: 12px;
 }
 
-/* 🎵 NOVA SEÇÃO PRODUÇÕES (CONFORME ESBOÇO) */
+/* 🎯 CENTRALIZAÇÃO DO BOTÃO CD (CTA) */
+.cta-wrapper {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;     
+    width: 100% !important;             
+    margin: 40px 0 !important;
+    text-align: center;
+}
+
+/* 🎵 GRID DE PRODUÇÕES (CONFORME SEU ESBOÇO) */
 .production-grid-final {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas como no seu esboço */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     padding: 20px 0;
 }
 
 .prod-thumb-link {
     display: block;
-    aspect-ratio: 16/9; /* Proporção widescreen para suas artes */
+    width: 100%;
+    max-width: 180px; 
+    aspect-ratio: 16/9; 
     overflow: hidden;
-    border-radius: 8px; /* Cantos arredondados como na imagem */
+    border-radius: 8px; 
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 0 auto;
 }
 
 .prod-thumb-link img {
@@ -118,4 +137,44 @@ section {
 }
 
 .prod-thumb-link:hover {
-    transform: scale(1.05); /* "A
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 📸 IMAGENS E VÍDEO */
+.hero-image { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; }
+.video-container-wrap { width: 100%; max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
+
+/* ✅ AJUSTE DA GALERIA */
+.gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+}
+
+.gallery-grid img { 
+    width: 100%; 
+    max-width: 180px; 
+    aspect-ratio: 1/1; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin: 0 auto;
+}
+
+/* 🔊 BOTÃO DE MÚSICA */
+#music-control {
+    position: fixed; bottom: 30px; right: 30px; 
+    width: 50px; height: 50px;
+    border-radius: 50%; background: rgba(20, 20, 20, 0.9); border: 2px solid #ffffff;
+    color: #ffffff; z-index: 1001; cursor: pointer; 
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* 📱 MOBILE */
+@media screen and (max-width: 768px) {
+    header { height: auto; padding: 15px 0; }
+    .nav-container { flex-direction: column; gap: 15px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .production-grid-final { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
