@@ -52,8 +52,17 @@ header {
     width: 100%;
 }
 
-.mini-logo img { height: 45px; width: auto; display: block; }
+.mini-logo img { 
+    height: 45px; 
+    width: auto; 
+    display: block; 
+    transition: transform 0.3s ease; /* Adicione isso para o zoom ser suave */
+}
 
+/* Adicione este bloco logo abaixo para o efeito de hover */
+.mini-logo:hover img {
+    transform: scale(1.1); /* O logo cresce 10% quando o usuário passa o mouse */
+}
 /* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
