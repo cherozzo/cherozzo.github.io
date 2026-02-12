@@ -1,23 +1,5 @@
-/* 🎨 CHEROZZO RECORDS - MASTER V7 (Harmonizado)
-   Arquitetura: Root > Global > Header > Seções > Componentes > Grid > Footer > Mobile
-*/
-
-:root {
-    --bg-dark: #1a1a1a;
-    --section-bg: rgba(22, 22, 22, 0.88);
-    --text-main: #fdfae6;
-    --accent: #ffffff;
-    --border-radius-lg: 12px;
-    --border-radius-pill: 40px;
-    /* Matemática de Fibonacci aproximada para espaçamentos */
-    --space-xs: 8px;
-    --space-sm: 15px;
-    --space-md: 32px;
-    --space-lg: 55px;
-}
-
-/* 1. CONFIGURAÇÃO GLOBAL */
-* { box-sizing: border-box; }
+/* 🎨 ESTILO CHEROZZO RECORDS - MASTER FINAL CONSOLIDADO */
+* { box-sizing: border-box; } /* Essencial para alinhamento no Opera */
 
 html { 
     scroll-behavior: smooth;
@@ -25,36 +7,36 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: #1a1a1a;
     background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.92)), url('foto7.jpg'); 
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    color: var(--text-main);
+    color: #fdfae6;
     font-family: 'Tahoma', sans-serif;
-    margin: 0; 
-    padding: 0; 
-    line-height: 1.65; /* Leve aumento para legibilidade */
+    margin: 0; padding: 0; line-height: 1.6;
     overflow-x: hidden; 
 }
 
-a {
+/* 🔗 LINKS E CLICÁVEIS */
+a, a:visited, a:active {
     text-decoration: none !important;
-    color: var(--accent) !important;
+    color: #ffffff !important;
     transition: 0.3s ease;
 }
 
-/* 2. ESTRUTURA DE CABEÇALHO */
+/* 🏗️ HEADER - ALINHAMENTO MILIMÉTRICO OPERA */
 header {
     background-image: url('miniheader.png'); 
     background-size: cover; 
     background-position: center;
+    background-repeat: no-repeat;
     height: 85px; 
     display: flex;
     align-items: center;
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
+    justify-content: center;
+    position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #2a2a2a;
     width: 100%;
 }
@@ -67,142 +49,202 @@ header {
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 0 20px; 
+    width: 100%;
 }
 
 .mini-logo img { 
     height: 45px; 
     width: auto; 
     display: block; 
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s ease; /* Adicione isso para o zoom ser suave */
 }
 
-.mini-logo:hover img { transform: scale(1.1); }
-
-/* 3. NAVEGAÇÃO E BOTÕES (PÍLULAS) */
-.main-nav ul { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-    display: flex; 
-    gap: var(--space-sm); 
+/* Adicione este bloco logo abaixo para o efeito de hover */
+.mini-logo:hover img {
+    transform: scale(1.1); /* O logo cresce 10% quando o usuário passa o mouse */
 }
+/* 🟢 PÍLULAS PADRONIZADAS (Altura Travada) */
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 15px; }
 
-.main-nav a, .btn-cta, .back-to-top a {
+.main-nav a, 
+.btn-cta, 
+.back-to-top a {
     font-family: 'Tahoma', sans-serif !important;
-    color: var(--accent) !important;
-    border: 2px solid var(--accent) !important; 
-    border-radius: var(--border-radius-pill) !important; 
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important; 
+    border-radius: 40px !important; 
     text-transform: uppercase !important;
+    font-weight: 400 !important; 
     font-size: 0.72rem !important;
-    letter-spacing: 1.2px !important;
+    
+    /* Correção de alinhamento vertical no Opera */
     height: 38px; 
-    padding: 0 22px !important;
+    padding: 0 20px !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    line-height: 1 !important;
+    
     transition: all 0.3s ease !important; 
+    letter-spacing: 1.2px !important;
     background-color: transparent !important;
+    white-space: nowrap;
+}
+
+section ul {
+    list-style-position: inside; /* Traz as bolinhas para o centro junto com o texto */
+    padding: 0;
+    display: inline-block; /* Mantém o bloco da lista unido no centro */
+    text-align: left; /* Opcional: mantém o texto da lista alinhado entre si */
 }
 
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
-    background-color: var(--accent) !important;
+    background-color: #ffffff !important;
     color: #1a1a1a !important;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* 4. SEÇÕES (O "QUADRO" CENTRALIZADO) */
+/* 🚀 SEÇÕES */
 section { 
-    padding: var(--space-lg) 45px; /* Espaçamento interno generoso e harmônico */
+    padding: 40px 25px; 
     max-width: 850px; 
-    margin: var(--space-md) auto; 
-    background: var(--section-bg); 
-    border-radius: var(--border-radius-lg);
+    margin: 25px auto; 
+    background: rgba(22, 22, 22, 0.88); 
+    border-radius: 12px;
     text-align: center;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: var(--space-md); /* Distância padrão título -> conteúdo */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+#video-destaque {
+    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url('foto5.jpg');
+    background-size: cover; background-position: center;
 }
 
-/* Ajuste específico para listas dentro das seções */
-section ul {
-    list-style-position: inside;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: left;
+/* 🚀 AJUSTE DE CENTRALIZAÇÃO DO CTA E WRAPPERS */
+.cta-wrapper, .back-to-top {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;             
+    margin: 35px 0;          
 }
 
-section p {
-    margin-bottom: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+/* 📸 IMAGENS E VÍDEO (Trava de Tamanho) */
+.hero-image { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
 }
 
-/* 5. GRIDS (GALERIA E PRODUÇÕES) */
-.gallery-grid, .production-grid-final {
-    display: grid;
-    gap: var(--space-sm);
-    padding-top: var(--space-sm);
-}
-
-/* Galeria 4 colunas */
-.gallery-grid { grid-template-columns: repeat(4, 1fr); }
-.gallery-grid a { display: block; overflow: hidden; border-radius: 8px; }
-.gallery-grid img { 
-    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
-    transition: transform 0.5s ease;
-}
-.gallery-grid a:hover img { transform: scale(1.1); }
-
-/* Produções 4 colunas */
-.production-grid-final { grid-template-columns: repeat(4, 1fr); }
-.prod-thumb-link {
-    display: block; width: 100%; aspect-ratio: 16/9; 
-    overflow: hidden; border-radius: 8px; transition: 0.3s ease;
-}
-.prod-thumb-link img { width: 100%; height: 100%; object-fit: cover; }
-.prod-thumb-link:hover { transform: scale(1.05); }
-
-/* 6. COMPONENTES ESPECÍFICOS */
 .video-container-wrap { 
-    width: 100%; max-width: 800px; margin: 0 auto; 
-    border-radius: var(--border-radius-lg); overflow: hidden; 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+#video-player { width: 100%; display: block; }
+
+/* 📸 AJUSTE DA GALERIA (Linhas 141 e 142) */
+.gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
 }
 
+/* Criamos este seletor para o link em volta da foto */
+.gallery-grid a {
+    display: block;
+    overflow: hidden; /* Garante que a foto não "saia" do quadrado no zoom */
+    border-radius: 8px;
+}
+
+.gallery-grid img { 
+    width: 100%; 
+    aspect-ratio: 1/1; 
+    object-fit: cover; 
+    transition: transform 0.4s ease; /* Faz o zoom ser suave */
+    display: block;
+}
+
+/* O efeito de zoom acontece quando passamos o mouse no link */
+.gallery-grid a:hover img {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+/* 📍 MAPA MODO DARK */
 #mapa iframe { 
     filter: grayscale(1) invert(0.9) contrast(1.2); 
-    border-radius: var(--border-radius-lg); 
+    border-radius: 15px; 
+    width: 100%;
 }
 
+/* 🔝 FOOTER */
+.site-footer { text-align: center; padding: 60px 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+/* 🔊 BOTÃO DE MÚSICA */
 #music-control {
     position: fixed; bottom: 30px; right: 30px; 
-    width: 50px; height: 50px; border-radius: 50%;
-    background: rgba(20, 20, 20, 0.9); border: 2px solid var(--accent);
-    color: var(--accent); z-index: 1001; cursor: pointer; 
+    width: 50px; height: 50px;
+    border-radius: 50%; background: rgba(20, 20, 20, 0.9); border: 2px solid #ffffff;
+    color: #ffffff; z-index: 1001; cursor: pointer; 
     display: flex; align-items: center; justify-content: center;
 }
 
-/* 7. FOOTER */
-.site-footer { 
-    text-align: center; 
-    padding: 80px 20px; 
-    display: flex; flex-direction: column; align-items: center; 
-    gap: 20px;
+/* 🎵 GRID DE PRODUÇÕES - INSERIR ANTES DO MOBILE */
+.production-grid-final {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 15px; /* Espaço entre as fotos */
+    padding: 20px 0;
 }
 
-/* 8. RESPONSIVIDADE (MOBILE) */
+.prod-thumb-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9; /* Mantém o formato de vídeo do YouTube */
+    overflow: hidden;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.prod-thumb-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+.prod-thumb-link:hover {
+    transform: scale(1.05);
+}
+
+/* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
 @media screen and (max-width: 768px) {
-    section { padding: 40px 20px; width: 92%; }
-    .nav-container { flex-direction: column; gap: var(--space-sm); }
+    header { height: auto; padding: 15px 0; }
+    .nav-container { flex-direction: column; gap: 15px; }
     .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .production-grid-final { grid-template-columns: repeat(2, 1fr); }
     
-    .gallery-grid, .production-grid-final { grid-template-columns: repeat(2, 1fr); }
+    .main-nav a { 
+        height: 32px; 
+        font-size: 0.62rem !important; 
+        padding: 0 12px !important; 
+    }
+
+    /* Impede imagens de estourarem a tela */
+    .hero-image, .video-container-wrap, section {
+        max-width: 92%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     
-    .main-nav a { height: 34px; font-size: 0.65rem !important; }
-    #music-control { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+    #music-control {
+        bottom: 15px; right: 15px; 
+        width: 42px; height: 42px;
+    }
 }
