@@ -87,7 +87,7 @@ section ul {
     list-style-position: inside; /* Traz as bolinhas para o centro junto com o texto */
     padding: 0;
     display: inline-block; /* Mantém o bloco da lista unido no centro */
-    text-align: center; /* Opcional: mantém o texto da lista alinhado entre si */
+    text-align: left; /* Opcional: mantém o texto da lista alinhado entre si */
 }
 
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
