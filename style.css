@@ -116,8 +116,8 @@ section {
 
 .bio {
     /* Aumentamos o padding lateral para 80px para criar um 'corredor' de leitura centralizado */
-    padding-left: 80px !important;
-    padding-right: 80px !important;
+    padding-left: 65px !important;
+    padding-right: 65px !important;
 }
 
 #video-destaque {
