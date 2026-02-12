@@ -83,6 +83,13 @@ header {
     white-space: nowrap;
 }
 
+section ul {
+    list-style-position: inside; /* Traz as bolinhas para o centro junto com o texto */
+    padding: 0;
+    display: inline-block; /* Mantém o bloco da lista unido no centro */
+    text-align: left; /* Opcional: mantém o texto da lista alinhado entre si */
+}
+
 .main-nav a:hover, .btn-cta:hover, .back-to-top a:hover {
     background-color: #ffffff !important;
     color: #1a1a1a !important;
@@ -96,6 +103,7 @@ section {
     margin: 25px auto; 
     background: rgba(22, 22, 22, 0.88); 
     border-radius: 12px;
+    text-align: center;
 }
 
 #video-destaque {
@@ -178,7 +186,6 @@ section {
 
 .prod-thumb-link:hover {
     transform: scale(1.05);
-    border-color: #ffffff;
 }
 
 /* 📱 MOBILE (Correção de Imagens Gigantes e Zoom) */
