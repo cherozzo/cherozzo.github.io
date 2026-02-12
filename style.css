@@ -138,8 +138,33 @@ section {
 }
 #video-player { width: 100%; display: block; }
 
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
+/* 📸 AJUSTE DA GALERIA (Linhas 141 e 142) */
+.gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+}
+
+/* Criamos este seletor para o link em volta da foto */
+.gallery-grid a {
+    display: block;
+    overflow: hidden; /* Garante que a foto não "saia" do quadrado no zoom */
+    border-radius: 8px;
+}
+
+.gallery-grid img { 
+    width: 100%; 
+    aspect-ratio: 1/1; 
+    object-fit: cover; 
+    transition: transform 0.4s ease; /* Faz o zoom ser suave */
+    display: block;
+}
+
+/* O efeito de zoom acontece quando passamos o mouse no link */
+.gallery-grid a:hover img {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
 
 /* 📍 MAPA MODO DARK */
 #mapa iframe { 
