@@ -114,6 +114,12 @@ section {
     text-align: center;
 }
 
+.bio {
+    /* Aumentamos o padding lateral para 80px para criar um 'corredor' de leitura centralizado */
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+}
+
 #video-destaque {
     background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url('foto5.jpg');
     background-size: cover; background-position: center;
